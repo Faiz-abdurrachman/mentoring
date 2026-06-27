@@ -57,6 +57,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const currentLevelSpan = document.getElementById('currentLevel');
     const mascotBubble = document.getElementById('mascotBubble');
 
+    let globalCurrentActive = 0;
+
     window.addEventListener('scroll', () => {
         let currentActive = 0;
         const scrollPosition = window.scrollY + (window.innerHeight / 1.5); // Trigger a bit below center
@@ -66,6 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 currentActive = index;
             }
         });
+        globalCurrentActive = currentActive;
 
         // Update Active States for animation
         checkpoints.forEach((cp, idx) => {
@@ -85,8 +88,9 @@ document.addEventListener('DOMContentLoaded', () => {
         updateMascot(currentActive);
     });
 
-    // Keyboard shortcut for running code (Ctrl+Enter)
+    // Keyboard Navigation & Shortcut (PPT-style arrows + Ctrl+Enter)
     document.addEventListener('keydown', function(e) {
+        // Jika sedang mengetik di editor Python, abaikan tombol panah
         if (e.target.tagName.toLowerCase() === 'textarea') {
             if (e.ctrlKey && e.key === 'Enter') {
                 e.preventDefault();
@@ -96,6 +100,18 @@ document.addEventListener('DOMContentLoaded', () => {
                     runSkulptCode(idx);
                 }
             }
+            return;
+        }
+
+        // Navigasi ala Presentasi (Arrow Keys)
+        if (['ArrowDown', 'ArrowRight', ' '].includes(e.key)) { // Spasi juga turun
+            e.preventDefault();
+            const nextNode = document.getElementById(`node-${globalCurrentActive + 1}`);
+            if (nextNode) nextNode.scrollIntoView({behavior: 'smooth', block: 'center'});
+        } else if (['ArrowUp', 'ArrowLeft'].includes(e.key)) {
+            e.preventDefault();
+            const prevNode = document.getElementById(`node-${Math.max(0, globalCurrentActive - 1)}`);
+            if (prevNode) prevNode.scrollIntoView({behavior: 'smooth', block: 'center'});
         }
     });
 });
