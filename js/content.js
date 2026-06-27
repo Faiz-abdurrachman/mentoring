@@ -61,6 +61,17 @@ print("Siap masuk materi pertama.")`},
 </div>
 `},
 
+  { id:"2.1b", part:2, title:"Kenapa Harus Python?", icon:"fa-brain",
+    breadcrumb:"19.30 | My First Python Code",
+    content:`<h1>Kenapa Harus Python?</h1>
+<p>Kenapa kita tidak belajar Java atau C++ saja? Karena Python adalah bahasa yang menggerakkan raksasa teknologi saat ini.</p>
+<div class="card-grid card-grid-3">
+<div class="card"><div class="card-icon" style="background:#FFF0F0;color:#DB4437"><i class="fab fa-google"></i></div><h3>Google & OpenAI</h3><p>Otak di balik ChatGPT & TensorFlow</p></div>
+<div class="card"><div class="card-icon" style="background:#F0F0FF;color:#0B3D91"><i class="fas fa-rocket"></i></div><h3>NASA</h3><p>Menganalisis data dari rover Mars</p></div>
+<div class="card"><div class="card-icon" style="background:#FFF0F0;color:#E50914"><i class="fas fa-film"></i></div><h3>Netflix & Spotify</h3><p>Algoritma rekomendasi film & musik</p></div>
+</div>
+<p class="text-muted" style="margin-top:20px; font-size:1.05rem;">Selain sangat laku di industri (Gaji rata-rata $116K di US), Python adalah <strong>bahasa paling ramah untuk pemula</strong> yang belum pernah ngoding sama sekali.</p>`},
+
   { id:"2.2", part:2, title:"Compiler vs Interpreter", icon:"fa-language",
     breadcrumb:"19.30 | My First Python Code",
     content:`<h1>Compiler vs Interpreter</h1>
