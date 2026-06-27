@@ -6,7 +6,7 @@
     <title>HerAI Mentoring: Python Quest</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800;900&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     
@@ -15,45 +15,42 @@
 </head>
 <body>
 
-    <!-- Animated Playful Background -->
-    <div class="bg-mesh">
-        <div class="blob blob-1"></div>
-        <div class="blob blob-2"></div>
-        <div class="blob blob-3"></div>
-    </div>
+    <!-- Elegant Background -->
+    <div class="bg-mesh"></div>
 
-    <!-- Gamified Topbar -->
+    <!-- Clean Topbar -->
     <header class="quest-header">
         <img src="referensi/logo-her-ai-transparent.png" class="quest-logo" alt="HerAI" onerror="this.src='https://via.placeholder.com/120x40?text=HerAI'">
         <div class="xp-bar-container">
-            <div class="xp-label">Level <span id="currentLevel">0</span>/<span id="totalLevel">29</span></div>
+            <div class="xp-label">Progress</div>
             <div class="xp-bar"><div class="xp-fill" id="xpFill"></div></div>
+            <div class="xp-label"><span id="currentLevel">0</span>/<span id="totalLevel">29</span></div>
         </div>
     </header>
 
-    <!-- Floating Playful Mascot -->
+    <!-- Floating Elegant Mascot (Left Bottom) -->
     <div class="guide-mascot">
-        <img src="referensi/persona-her-ai.png" alt="HerAI Guide" class="guide-img" onerror="this.src='https://via.placeholder.com/150x180?text=Guide'">
         <div class="guide-bubble" id="mascotBubble">
-            Selamat datang di Python Quest! Scroll ke bawah untuk memulai petualangan.
+            Selamat datang di HerAI Mentoring. Scroll untuk memulai perjalanan belajarmu.
         </div>
+        <img src="referensi/persona-her-ai.png" alt="HerAI Guide" class="guide-img" onerror="this.src='https://via.placeholder.com/150x180?text=Guide'">
     </div>
 
-    <!-- The Quest Map (Main Content) -->
+    <!-- Neat Vertical Timeline (Main Content) -->
     <main class="quest-map" id="questMap">
         <div class="quest-line"></div>
         
         <!-- Welcome Node -->
         <div class="checkpoint welcome-node active" id="node-0">
             <div class="map-dot"><i class="fas fa-flag"></i></div>
-            <div class="card-wrapper" style="width:100%; margin: 0; padding:0; justify-content:center;">
-                <div class="playful-card">
-                    <h1 style="font-size: 3rem;">Siap Memulai <br><span class="text-pink">Python Quest?</span></h1>
-                    <p style="font-size: 1.3rem; margin-top:20px; color: var(--text-dark);">
-                        Malam ini kita akan memastikan alat tempur kamu siap, dan merangkai baris kode Python pertamamu.
+            <div class="card-wrapper">
+                <div class="elegant-card">
+                    <h1 style="font-size: 2.8rem;">Siap Membangun <br><span class="text-pink">Inovasi Teknologi?</span></h1>
+                    <p style="font-size: 1.2rem; margin-top:15px; color: var(--text-muted);">
+                        Malam ini kita akan memastikan lingkungan kerjamu siap, dan merangkai baris kode Python pertamamu bersama HerAI.
                     </p>
                     <button class="btn-start" onclick="document.getElementById('node-1').scrollIntoView({behavior:'smooth', block:'center'})">
-                        Mulai Petualangan <i class="fas fa-play" style="margin-left: 10px;"></i>
+                        Mulai Belajar <i class="fas fa-arrow-right"></i>
                     </button>
                 </div>
             </div>

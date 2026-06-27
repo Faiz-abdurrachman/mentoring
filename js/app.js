@@ -1,4 +1,4 @@
-// Playful Gamified Map Logic & Python Execution
+// Neat Gamified Timeline & Python Execution
 
 document.addEventListener('DOMContentLoaded', () => {
     const nodesContainer = document.getElementById('nodesContainer');
@@ -12,38 +12,37 @@ document.addEventListener('DOMContentLoaded', () => {
 
         COURSE.forEach((lesson, index) => {
             const slideIndex = index + 1; 
-            const sideClass = (slideIndex % 2 === 1) ? 'left' : 'right'; // Alternating sides
 
-            // Build Arcade Editor HTML if code exists
-            let arcadeHTML = '';
+            // Build Elegant IDE Editor HTML if code exists
+            let ideHTML = '';
             if (lesson.playground) {
-                arcadeHTML = `
-                <div class="arcade-machine">
-                    <div class="arcade-header">
-                        <span class="arcade-title"><i class="fas fa-gamepad"></i> CODE.PY</span>
-                        <span style="font-size:0.85rem; opacity:0.8;"><i class="fas fa-keyboard"></i> Ctrl+Enter to Run</span>
+                ideHTML = `
+                <div class="ide-machine">
+                    <div class="ide-header">
+                        <span class="ide-title"><i class="fas fa-terminal" style="color:var(--her-light-pink);"></i> editor.py</span>
+                        <span><i class="fas fa-keyboard"></i> Ctrl+Enter</span>
                     </div>
-                    <div class="arcade-body">
-                        <textarea id="code-${slideIndex}" class="arcade-textarea" spellcheck="false">${lesson.playground}</textarea>
-                        <button class="arcade-btn" onclick="runSkulptCode(${slideIndex})"><i class="fas fa-play"></i> RUN</button>
+                    <div class="ide-body">
+                        <textarea id="code-${slideIndex}" class="ide-textarea" spellcheck="false">${lesson.playground}</textarea>
+                        <button class="ide-btn" onclick="runSkulptCode(${slideIndex})"><i class="fas fa-play" style="margin-right:5px;"></i> Run Code</button>
                     </div>
-                    <div class="arcade-output" id="output-${slideIndex}">> Tekan RUN untuk melihat keajaiban... </div>
+                    <div class="ide-output" id="output-${slideIndex}">> Menunggu instruksi... </div>
                 </div>`;
             }
 
-            // Clean content to make it professional yet playful
+            // Clean content to make it professional
             let cleanContent = lesson.content.replace(/🤔|🐍|📦|🎉|✨|🚀|🔥|🌟/g, "");
 
             const nodeHTML = `
-            <div class="checkpoint ${sideClass}" id="node-${slideIndex}">
+            <div class="checkpoint" id="node-${slideIndex}">
                 <div class="map-dot">${slideIndex}</div>
                 <div class="card-wrapper">
-                    <div class="playful-card">
+                    <div class="elegant-card">
                         <div class="badge-part">${lesson.breadcrumb}</div>
                         <div class="lesson-content">
                             ${cleanContent}
                         </div>
-                        ${arcadeHTML}
+                        ${ideHTML}
                     </div>
                 </div>
             </div>`;
@@ -60,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.addEventListener('scroll', () => {
         let currentActive = 0;
-        const scrollPosition = window.scrollY + (window.innerHeight / 2); // Trigger at middle of screen
+        const scrollPosition = window.scrollY + (window.innerHeight / 1.5); // Trigger a bit below center
 
         checkpoints.forEach((checkpoint, index) => {
             if (checkpoint.offsetTop <= scrollPosition) {
@@ -68,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // Update Active States
+        // Update Active States for animation
         checkpoints.forEach((cp, idx) => {
             if (idx <= currentActive) {
                 cp.classList.add('active');
@@ -91,7 +90,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if (e.target.tagName.toLowerCase() === 'textarea') {
             if (e.ctrlKey && e.key === 'Enter') {
                 e.preventDefault();
-                // Find which textarea we are in
                 const idAttr = e.target.getAttribute('id');
                 if (idAttr && idAttr.startsWith('code-')) {
                     const idx = idAttr.replace('code-', '');
@@ -106,25 +104,24 @@ document.addEventListener('DOMContentLoaded', () => {
 let currentMascotMsg = "";
 function updateMascot(index) {
     const bubble = document.getElementById('mascotBubble');
-    let msg = "Terus semangat! Kamu pasti bisa memahaminya.";
+    let msg = "Terus semangat! Setiap baris kode membawa inovasi.";
     
-    if (index === 0) msg = "Selamat datang di Python Quest! Scroll ke bawah untuk memulai petualangan.";
-    else if (index === (typeof COURSE !== 'undefined' ? COURSE.length : 0)) msg = "Luar biasa! Kamu berhasil menaklukkan semua level hari ini.";
+    if (index === 0) msg = "Selamat datang di HerAI. Scroll untuk memulai petualangan belajarmu.";
+    else if (index === (typeof COURSE !== 'undefined' ? COURSE.length : 0)) msg = "Luar biasa! Kamu berhasil menaklukkan sesi ini.";
     else if (COURSE[index - 1] && COURSE[index - 1].playground) {
-        msg = "Wah, ada tantangan koding! Modifikasi kodenya sesukamu, lalu klik RUN ya.";
+        msg = "Silakan modifikasi kode di atas dan klik 'Run Code' untuk melihat hasilnya.";
     }
 
     if (currentMascotMsg !== msg) {
         currentMascotMsg = msg;
-        // Re-trigger animation
         bubble.style.animation = 'none';
-        bubble.offsetHeight; /* trigger reflow */
+        bubble.offsetHeight; 
         bubble.style.animation = 'popBubble 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
         bubble.innerText = msg;
     }
 }
 
-// Skulpt Arcade Execution Engine
+// Skulpt IDE Execution Engine
 function builtinRead(x) {
     if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined)
         throw "File not found: '" + x + "'";
@@ -136,7 +133,7 @@ function runSkulptCode(slideIndex) {
     const outputDiv = document.getElementById(`output-${slideIndex}`);
     
     outputDiv.innerHTML = '';
-    outputDiv.style.color = '#50FA7B'; // Arcade Green
+    outputDiv.style.color = '#48BB78'; // Success green
     
     Sk.configure({
         output: function(text) {
@@ -149,10 +146,10 @@ function runSkulptCode(slideIndex) {
         return Sk.importMainWithBody("<stdin>", false, code, true);
     }).then(
         function() { 
-            if (outputDiv.innerHTML === '') outputDiv.innerHTML = '> (Selesai tanpa output)'; 
+            if (outputDiv.innerHTML === '') outputDiv.innerHTML = '> (Proses selesai tanpa output)'; 
         },
         function(err) {
-            outputDiv.style.color = '#FF5F56'; // Arcade Red
+            outputDiv.style.color = '#F56565'; // Error red
             outputDiv.innerHTML = '> ' + err.toString();
         }
     );
