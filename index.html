@@ -6,7 +6,7 @@
     <title>HerAI Mentoring: Python Kickstart</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     
@@ -15,48 +15,49 @@
 </head>
 <body>
 
-    <!-- Fixed Header -->
-    <header class="topbar">
-        <div class="topbar-logos">
-            <img class="logo-her-ai" src="referensi/logo-her-ai-transparent.png" alt="HerAI" onerror="this.src='https://via.placeholder.com/150x40?text=HerAI'">
-        </div>
-        <div class="progress-container">
-            <div class="progress-bar">
-                <div class="progress-fill" id="progressFill"></div>
-            </div>
-            <span class="progress-text" id="slideCountText">Sesi 2: Kickstart Python</span>
-        </div>
-    </header>
-
-    <!-- Nav Arrows (PPT style) -->
-    <div class="nav-arrow nav-prev disabled" id="btnPrev" onclick="changeSlide(-1)">
-        <i class="fas fa-chevron-left"></i>
-    </div>
-    <div class="nav-arrow nav-next" id="btnNext" onclick="changeSlide(1)">
-        <i class="fas fa-chevron-right"></i>
-    </div>
-
-    <!-- Small Discrete Mascot -->
-    <div class="mascot-container" id="mascotGuide">
-        <div class="mascot-bubble" id="mascotText">Selamat datang! Tekan panah kanan untuk mulai presentasi.</div>
-        <img src="referensi/persona-her-ai.png" alt="Persona" class="mascot-img" onerror="this.src='https://via.placeholder.com/100x120?text=Persona'">
-    </div>
-
-    <!-- PPT Container -->
-    <main class="story-container" id="storyContainer">
+    <div class="layout">
         
-        <!-- Slide 0: Welcome -->
-        <section class="slide active" id="slide-0">
-            <div class="glass-card text-center hero-card">
-                <h1>Siap Membangun <br><span class="text-pink">Inovasi Teknologi?</span></h1>
-                <p>Malam ini kita akan memastikan alat tempur kamu siap, dan merangkai baris kode Python pertamamu.</p>
-                <div class="bounce-arrow" onclick="changeSlide(1)">
-                    Mulai Belajar <i class="fas fa-arrow-right" style="margin-left: 10px;"></i>
+        <!-- Gamified Sidebar -->
+        <aside class="sidebar">
+            <img class="sidebar-logo" src="referensi/logo-her-ai-transparent.png" alt="HerAI">
+            <div class="sidebar-title">Sesi 2: Kickstart Python</div>
+            
+            <!-- Mascot seamlessly integrated -->
+            <div class="mascot-profile">
+                <img src="referensi/persona-her-ai.png" alt="Guide" class="mascot-img">
+                <div class="mascot-speech" id="mascotText">
+                    Halo! Tekan tombol Panah Bawah atau scroll untuk memulai perjalanan belajarmu.
                 </div>
             </div>
-        </section>
 
-    </main>
+            <!-- Gamified Path Nodes (Generated dynamically) -->
+            <div class="journey-progress" id="journeyProgress">
+                <!-- Nodes injected by JS -->
+            </div>
+        </aside>
+
+        <!-- Main Scrolling Gamified Journey -->
+        <main class="main-content" id="mainContent">
+            <!-- Connecting Line -->
+            <div class="journey-line"></div>
+            
+            <!-- Dynamic Cards injected here -->
+            <div id="slidesContainer">
+                <section class="slide active" id="slide-0">
+                    <div class="glass-card text-center">
+                        <h1 style="font-size: 3.5rem;">Siap Membangun <br><span class="text-pink">Inovasi AI?</span></h1>
+                        <p style="font-size: 1.2rem; color: var(--text-muted); margin-top:20px;">
+                            Malam ini kita akan memastikan alat tempur kamu siap,<br>dan merangkai baris kode Python pertamamu.
+                        </p>
+                        <div class="guide-arrow">
+                            <i class="fas fa-arrow-down" style="font-size: 1.5rem; color: var(--primary-pink);"></i>
+                            Mulai Perjalanan
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
 
     <script src="js/content.js"></script>
     <script src="js/app.js"></script>
