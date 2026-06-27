@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HerAI Mentoring: Python Kickstart</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Fixed Header -->
+    <header class="topbar">
+        <div class="topbar-logos">
+            <img class="logo-her-ai" src="referensi/logo-her-ai-transparent.png" alt="HerAI" onerror="this.src='https://via.placeholder.com/150x40?text=HerAI'">
+        </div>
+        <div class="progress-container">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+                <i class="fas fa-rocket rocket-icon" id="rocketIcon"></i>
+            </div>
+            <span class="progress-text">Sesi 2: Kickstart Python</span>
+        </div>
+    </header>
+
+    <!-- Fixed Mascot Guide -->
+    <div class="mascot-container" id="mascotGuide">
+        <div class="mascot-bubble" id="mascotText" style="transition: opacity 0.3s ease;">Hai, selamat datang! Scroll ke bawah untuk mulai ya! ✨</div>
+        <!-- Menggunakan Persona 2 agar konsisten dengan aset yang ada -->
+        <img src="referensi/persona2.png" alt="Persona" class="mascot-img" onerror="this.src='https://via.placeholder.com/200x250?text=Persona'">
+    </div>
+
+    <!-- Scroll Snapping Container -->
+    <main class="story-container">
+        
+        <!-- Slide 1: Welcome -->
+        <section class="slide" id="slide-1">
+            <div class="glass-card text-center hero-card">
+                <div class="glow-bg"></div>
+                <h1>Siap Membangun <br><span class="text-pink">Inovasi AI?</span></h1>
+                <p>Bersama Azriel & Faiz. Pastikan laptop kamu siap tempur malam ini!</p>
+                <div class="bounce-arrow">
+                    <i class="fas fa-chevron-down"></i>
+                    <p>Scroll ke bawah</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 2: Cek Senjata (Live Check) -->
+        <section class="slide" id="slide-2">
+            <div class="glass-card">
+                <h2 class="text-purple"><i class="fas fa-laptop-code text-pink"></i> 1. Cek "Senjata" Tempur</h2>
+                <p>Kita akan ngoding pakai <strong>Google Colab</strong>. Lebih gampang, nggak bikin laptop nge-lag!</p>
+                
+                <div class="interactive-box mt-4">
+                    <h3>Misi Pertama Kamu:</h3>
+                    <ul>
+                        <li>Buka <a href="https://colab.research.google.com" target="_blank" class="text-pink" style="text-decoration: underline;">Google Colab</a></li>
+                        <li>Klik <strong>New Notebook</strong></li>
+                        <li>Pastikan ubah Runtime ke <strong>T4 GPU</strong> (Klik menu Runtime > Change runtime type)</li>
+                    </ul>
+                    <button class="btn btn-primary mt-3" onclick="alert('Bagus! Senjata kamu udah siap 🚀')">Saya Sudah Siap!</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 3: My First Code (Playground UI) -->
+        <section class="slide" id="slide-3">
+            <div class="glass-card w-large">
+                <h2 class="text-purple">2. My First Python Code 🐍</h2>
+                <p>Mari kita suruh komputer ngomong ke kita.</p>
+                
+                <!-- Fake Terminal/Playground -->
+                <div class="playground-ui mt-4">
+                    <div class="playground-header">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                        <span class="playground-title">colab-herai.py</span>
+                    </div>
+                    <div class="playground-body">
+                        <pre><code><span class="code-keyword">print</span>(<span class="code-string">"Halo HerAI, aku siap belajar AI!"</span>)</code></pre>
+                        <button class="btn btn-run" onclick="runFakeCode('output1', 'Halo HerAI, aku siap belajar AI!')"><i class="fas fa-play"></i> Run Code</button>
+                    </div>
+                    <div class="playground-output" id="output1">
+                        > _
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 4: Variables -->
+        <section class="slide" id="slide-4">
+            <div class="glass-card w-large">
+                <h2 class="text-purple">3. Variabel = Kardus Penyimpanan 📦</h2>
+                <p>Komputer butuh tempat buat nyimpen data. Kita sebut itu <strong>Variabel</strong>.</p>
+                
+                <div class="playground-ui mt-4">
+                    <div class="playground-header">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                    </div>
+                    <div class="playground-body">
+                        <pre><code>nama = <span class="code-string">"Aisyah"</span>
+umur = <span class="code-number">20</span>
+<span class="code-keyword">print</span>(<span class="code-string">"Halo, nama saya"</span>, nama, <span class="code-string">"umur saya"</span>, umur)</code></pre>
+                        <button class="btn btn-run" onclick="runFakeCode('output2', 'Halo, nama saya Aisyah umur saya 20')"><i class="fas fa-play"></i> Run Code</button>
+                    </div>
+                    <div class="playground-output" id="output2">
+                        > _
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 5: Logic Interactive Game -->
+        <section class="slide" id="slide-5">
+            <div class="glass-card">
+                <h2 class="text-purple">4. Logika Keputusan (If-Else) 🤔</h2>
+                <p>Bantu komputer membuat keputusan. Coba kuis interaktif ini!</p>
+                
+                <div class="quiz-box mt-4" id="quizBox">
+                    <h3>Kasus:</h3>
+                    <p style="background: #f4f4f4; padding: 10px; border-radius: 5px; font-family: monospace; display: inline-block;">nilai_ujian = 80</p>
+                    <p class="mt-3">Jika <code>nilai_ujian > 70</code>, maka peserta <strong>Lulus</strong>. Jika tidak, <strong>Gagal</strong>.</p>
+                    <p class="mt-3">Apa output dari kode di atas?</p>
+                    <div class="quiz-options mt-3">
+                        <button class="btn btn-outline" onclick="checkQuiz(false)">Gagal</button>
+                        <button class="btn btn-outline" onclick="checkQuiz(true)">Lulus</button>
+                    </div>
+                    <div id="quizResult" class="mt-3 hidden"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Slide 6: Outro -->
+        <section class="slide" id="slide-6">
+            <div class="glass-card text-center">
+                <h1>Itu Baru Permulaan! 🌟</h1>
+                <p>Kalian luar biasa! Jangan lupa praktikkan lagi materinya di rumah.</p>
+                <h3 class="text-pink mt-4">Q & A Time</h3>
+                <p class="text-muted">Silakan ketik pertanyaan di kolom chat ya!</p>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
