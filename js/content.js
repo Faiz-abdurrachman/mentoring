@@ -1,4 +1,121 @@
 const COURSE = [
+  // ===================== PART 1 =====================
+  { id:"1.1", part:1, title:"Kenapa Python? — Bahasa #1 AI", icon:"fa-brain",
+    breadcrumb:"Part 1: Kenapa Python?",
+    content:`<h1>Kenapa Python Jadi #1?</h1>
+<div class="card-grid card-grid-4">
+<div class="card"><div class="card-icon"><i class="fas fa-chart-line"></i></div><h3>15.39% TIOBE</h3><p>Peringkat #1 dunia<br><small>TIOBE Index Jun 2024</small></p></div>
+<div class="card"><div class="card-icon"><i class="fas fa-users"></i></div><h3>44% Developer</h3><p>44.1% profesional developer<br><small>StackOverflow Survey 2024</small></p></div>
+<div class="card"><div class="card-icon"><i class="fas fa-boxes"></i></div><h3>500K+ Library</h3><p>523 ribu project<br><small>PyPI.org</small></p></div>
+<div class="card"><div class="card-icon"><i class="fas fa-feather"></i></div><h3>Syntax Simpel</h3><p>Kayak bahasa Inggris<br><small>print("halo") — 3 kata</small></p></div>
+</div>
+<div class="data-box"><strong>Data:</strong> TIOBE Index Juni 2024 — Python 15.39%, naik 2.15% dari tahun lalu. C: 10.03%. Java: 8.40%.</div>
+`,playground:`print("Python = #1 bahasa pemrograman!")
+print("TIOBE Index: 15.39%")
+print("StackOverflow: 44% developer")`},
+
+  { id:"1.2", part:1, title:"Python vs Bahasa Lain", icon:"fa-balance-scale",
+    breadcrumb:"Part 1: Kenapa Python?",
+    content:`<h1>Python vs Bahasa Pemrograman Lain</h1>
+<table class="comparison-table">
+<tr><th>Aspek</th><th class="hl">Python</th><th>Java</th><th>JavaScript</th><th>R</th><th>C++</th></tr>
+<tr><td><strong>Kegunaan</strong></td><td class="hl">AI, Data, Web</td><td>Mobile, Enterprise</td><td>Web, Browser</td><td>Statistik</td><td>Game, Sistem</td></tr>
+<tr><td><strong>Syntax</strong></td><td class="hl">Sangat Simpel</td><td>Menengah</td><td>Menengah</td><td>Menengah</td><td>Sulit</td></tr>
+<tr><td><strong>Belajar</strong></td><td class="hl">Paling Cepat</td><td>Sedang</td><td>Sedang</td><td>Sedang</td><td>Lambat</td></tr>
+<tr><td><strong>Gaji (US)</strong></td><td class="hl">$116K</td><td>$102K</td><td>$96K</td><td>$85K</td><td>$108K</td></tr>
+</table>
+<p class="text-muted">Sumber: TIOBE Index, StackOverflow Survey, Glassdoor 2024</p>`},
+
+  { id:"1.3", part:1, title:"Siapa yang Pakai Python?", icon:"fa-building",
+    breadcrumb:"Part 1: Kenapa Python?",
+    content:`<h1>Siapa yang Pakai Python?</h1>
+<div class="card-grid card-grid-3">
+<div class="card"><div class="card-icon" style="background:#FFF0F0;color:#DB4437"><i class="fab fa-google"></i></div><h3>Google</h3><p>TensorFlow, JAX, Colab<br>semua dibangun dengan Python</p></div>
+<div class="card"><div class="card-icon" style="background:#F0F0FF;color:#0B3D91"><i class="fas fa-rocket"></i></div><h3>NASA</h3><p>Analisis data rover Mars<br>pakai Python</p></div>
+<div class="card"><div class="card-icon" style="background:#FFF0F0;color:#E50914"><i class="fas fa-film"></i></div><h3>Netflix</h3><p>247M subscribers<br>recommendation engine Python</p></div>
+<div class="card"><div class="card-icon" style="background:#F0FFF0;color:#1DB954"><i class="fab fa-spotify"></i></div><h3>Spotify</h3><p>600M+ users<br>80% backend Python</p></div>
+<div class="card"><div class="card-icon" style="background:#FFF5F9;color:#E1306C"><i class="fab fa-instagram"></i></div><h3>Instagram</h3><p>800M+ users<br>Django framework (Python)</p></div>
+<div class="card"><div class="card-icon" style="background:#F5F5FF;color:#6366f1"><i class="fas fa-atom"></i></div><h3>OpenAI</h3><p>ChatGPT, GPT-4<br>research & backend Python</p></div>
+</div>`},
+
+  { id:"1.4", part:1, title:"Cara Kerja & Cocok Buat Pemula", icon:"fa-cogs",
+    breadcrumb:"Part 1: Kenapa Python?",
+    content:`<h1>Cara Kerja & Cocok Buat Pemula</h1>
+<div class="split">
+<div>
+<h3>Python = Interpreted Language</h3>
+<p>Kode Python dibaca <strong>baris per baris</strong> oleh Interpreter. Hasilnya langsung keluar.</p>
+<p class="text-pink">Beda sama C++ / Java</p><p>Yang harus di-<em>compile</em> dulu (bisa 5-10 menit) baru bisa jalan.</p>
+</div>
+<div>
+<h3>Kenapa Cocok Buat Pemula</h3>
+<ul class="checklist">
+<li><i class="fas fa-check-circle"></i> Instant feedback — ketik → Enter → lihat</li>
+<li><i class="fas fa-check-circle"></i> Syntax bersih — gak ada kurung kurawal, titik koma</li>
+<li><i class="fas fa-check-circle"></i> Komunitas supportif — jutaan tutorial gratis</li>
+<li><i class="fas fa-check-circle"></i> Langsung produktif — hari pertama udah bisa ngoding</li>
+</ul>
+</div></div>`,playground:`print("Python cocok buat pemula!")
+print("Karena: instant feedback")
+print("Syntax simpel")
+print("Komunitas besar")`},
+
+  // ===================== PART 2 =====================
+  { id:"2.1", part:2, title:"Tools yang Dibutuhkan", icon:"fa-tools",
+    breadcrumb:"Part 2: Persiapan",
+    content:`<h1>Tools yang Dibutuhkan</h1><p class="text-muted">Semuanya GRATIS — cukup laptop + internet</p>
+<div class="card-grid card-grid-3">
+<div class="card"><div class="card-icon"><i class="fab fa-python"></i></div><h3>Python 3.12</h3><p>Bahasa pemrograman<br><small>python.org/downloads</small></p><span class="badge badge-pink">Wajib</span></div>
+<div class="card"><div class="card-icon"><i class="fas fa-code"></i></div><h3>VS Code</h3><p>Editor tempat nulis kode<br><small>code.visualstudio.com</small></p></div>
+<div class="card"><div class="card-icon"><i class="fas fa-cloud"></i></div><h3>Google Colab</h3><p>Python online di browser<br><small>colab.research.google.com</small></p><span class="badge badge-green">CUKUP!</span></div>
+</div>
+<div class="ok-box"><strong>Minimal: Colab aja cukup!</strong> Gak perlu install apa-apa.</div>`},
+
+  { id:"2.2", part:2, title:"Download & Install Python", icon:"fa-download",
+    breadcrumb:"Part 2: Persiapan",
+    content:`<h1>Download & Install Python</h1>
+<p>Buka <strong>python.org/downloads</strong> — otomatis deteksi OS.</p>
+<h3>Langkah Paling Penting</h3>
+<div class="err-box" style="border:2px solid var(--danger)"><h3 style="color:var(--danger)">CENTANG: "Add Python to PATH"</h3><p style="color:var(--danger);font-weight:700">JANGAN LUPA! Kalau lupa → python gak bakal kedetek → error "python is not recognized"</p></div>
+<p>Setelah centang → klik <strong>"Install Now"</strong> → tunggu → Close.</p>`},
+
+  { id:"2.3", part:2, title:"Mac & Linux User", icon:"fab fa-apple",
+    breadcrumb:"Part 2: Persiapan",
+    content:`<h1>Mac & Linux User</h1>
+<div class="split">
+<div><h3>Mac</h3><div class="block-code"><span class="cm"># Install Homebrew dulu (brew.sh)</span>
+brew install python@3.12
+<span class="cm"># Verifikasi</span>
+python3 --version</div></div>
+<div><h3>Linux (Ubuntu/Debian)</h3><div class="block-code">sudo apt install python3 -y
+<span class="cm"># Verifikasi</span>
+python3 --version</div></div>
+</div>`},
+
+  { id:"2.4", part:2, title:"VS Code + Python Extension", icon:"fas fa-code",
+    breadcrumb:"Part 2: Persiapan",
+    content:`<h1>VS Code + Python Extension</h1>
+<p>Download: <strong>code.visualstudio.com</strong></p>
+<p>Setelah install:</p>
+<ul class="checklist">
+<li><i class="fas fa-check-circle"></i> <kbd>Ctrl+Shift+X</kbd> → cari "Python" → Install (Microsoft)</li>
+<li><i class="fas fa-check-circle"></i> <kbd>Ctrl+\`</kbd> → buka terminal → <code>python --version</code></li>
+</ul>
+<div class="ok-box"><strong>Gak bisa install?</strong> Gak masalah — Colab itu juga editor. Fungsinya sama.</div>`},
+
+  { id:"2.5", part:2, title:"Google Colab + T4 GPU", icon:"fas fa-cloud",
+    breadcrumb:"Part 2: Persiapan",
+    content:`<h1>Google Colab + T4 GPU</h1>
+<p>Buka: <strong>colab.research.google.com</strong></p>
+<div class="card-grid card-grid-3">
+<div class="card"><div class="card-icon"><i class="fas fa-globe"></i></div><h3>1. Buka</h3><p>colab.research.google.com<br>Login akun Google</p></div>
+<div class="card"><div class="card-icon"><i class="fas fa-microchip"></i></div><h3>2. T4 GPU</h3><p>Runtime > Change runtime<br><strong>T4 GPU</strong> > Save</p></div>
+<div class="card"><div class="card-icon"><i class="fas fa-play"></i></div><h3>3. Test</h3><p><code>print("Siap!")</code><br>Shift+Enter</p></div>
+</div>
+<div class="data-box"><strong>Kenapa T4 GPU?</strong> Nanti minggu depan training AI butuh GPU. GRATIS dari Google!</div>`,playground:`print("Colab Siap!")
+print("Laptop lokal & Colab = sama")`},
+
+  // ===================== PART 3 =====================
   { id:"3.1", part:3, title:"print() — Fungsi Pertamamu", icon:"fa-print",
     breadcrumb:"Part 3: My First Python",
     content:`
@@ -204,123 +321,7 @@ print("2**10 =", 2 ** 10, "(1 KB)")
 nama = "Kamu"
 print(f"Halo {nama}, hebat!")`},
 
-  // ===================== PART_OLD2 =====================
-  { id:"2.1", part:2, title:"Tools yang Dibutuhkan", icon:"fa-tools",
-    breadcrumb:"Part 2: Persiapan",
-    content:`<h1>Tools yang Dibutuhkan</h1><p class="text-muted">Semuanya GRATIS — cukup laptop + internet</p>
-<div class="card-grid card-grid-3">
-<div class="card"><div class="card-icon"><i class="fab fa-python"></i></div><h3>Python 3.12</h3><p>Bahasa pemrograman<br><small>python.org/downloads</small></p><span class="badge badge-pink">Wajib</span></div>
-<div class="card"><div class="card-icon"><i class="fas fa-code"></i></div><h3>VS Code</h3><p>Editor tempat nulis kode<br><small>code.visualstudio.com</small></p></div>
-<div class="card"><div class="card-icon"><i class="fas fa-cloud"></i></div><h3>Google Colab</h3><p>Python online di browser<br><small>colab.research.google.com</small></p><span class="badge badge-green">CUKUP!</span></div>
-</div>
-<div class="ok-box"><strong>Minimal: Colab aja cukup!</strong> Gak perlu install apa-apa.</div>`},
-
-  { id:"2.2", part:2, title:"Download & Install Python", icon:"fa-download",
-    breadcrumb:"Part 2: Persiapan",
-    content:`<h1>Download & Install Python</h1>
-<p>Buka <strong>python.org/downloads</strong> — otomatis deteksi OS.</p>
-<h3>Langkah Paling Penting</h3>
-<div class="err-box" style="border:2px solid var(--danger)"><h3 style="color:var(--danger)">CENTANG: "Add Python to PATH"</h3><p style="color:var(--danger);font-weight:700">JANGAN LUPA! Kalau lupa → python gak bakal kedetek → error "python is not recognized"</p></div>
-<p>Setelah centang → klik <strong>"Install Now"</strong> → tunggu → Close.</p>`},
-
-  { id:"2.3", part:2, title:"Mac & Linux User", icon:"fab fa-apple",
-    breadcrumb:"Part 2: Persiapan",
-    content:`<h1>Mac & Linux User</h1>
-<div class="split">
-<div><h3>Mac</h3><div class="block-code"><span class="cm"># Install Homebrew dulu (brew.sh)</span>
-brew install python@3.12
-<span class="cm"># Verifikasi</span>
-python3 --version</div></div>
-<div><h3>Linux (Ubuntu/Debian)</h3><div class="block-code">sudo apt install python3 -y
-<span class="cm"># Verifikasi</span>
-python3 --version</div></div>
-</div>`},
-
-  { id:"2.4", part:2, title:"VS Code + Python Extension", icon:"fas fa-code",
-    breadcrumb:"Part 2: Persiapan",
-    content:`<h1>VS Code + Python Extension</h1>
-<p>Download: <strong>code.visualstudio.com</strong></p>
-<p>Setelah install:</p>
-<ul class="checklist">
-<li><i class="fas fa-check-circle"></i> <kbd>Ctrl+Shift+X</kbd> → cari "Python" → Install (Microsoft)</li>
-<li><i class="fas fa-check-circle"></i> <kbd>Ctrl+\`</kbd> → buka terminal → <code>python --version</code></li>
-</ul>
-<div class="ok-box"><strong>Gak bisa install?</strong> Gak masalah — Colab itu juga editor. Fungsinya sama.</div>`},
-
-  { id:"2.5", part:2, title:"Google Colab + T4 GPU", icon:"fas fa-cloud",
-    breadcrumb:"Part 2: Persiapan",
-    content:`<h1>Google Colab + T4 GPU</h1>
-<p>Buka: <strong>colab.research.google.com</strong></p>
-<div class="card-grid card-grid-3">
-<div class="card"><div class="card-icon"><i class="fas fa-globe"></i></div><h3>1. Buka</h3><p>colab.research.google.com<br>Login akun Google</p></div>
-<div class="card"><div class="card-icon"><i class="fas fa-microchip"></i></div><h3>2. T4 GPU</h3><p>Runtime > Change runtime<br><strong>T4 GPU</strong> > Save</p></div>
-<div class="card"><div class="card-icon"><i class="fas fa-play"></i></div><h3>3. Test</h3><p><code>print("Siap!")</code><br>Shift+Enter</p></div>
-</div>
-<div class="data-box"><strong>Kenapa T4 GPU?</strong> Nanti minggu depan training AI butuh GPU. GRATIS dari Google!</div>`,playground:`print("Colab Siap!")
-print("Laptop lokal & Colab = sama")`},
-
-  // ===================== PART_OLD3 =====================
-  { id:"1.1", part:1, title:"Kenapa Python? — Bahasa #1 AI", icon:"fa-brain",
-    breadcrumb:"Part 1: Kenapa Python?",
-    content:`<h1>Kenapa Python Jadi #1?</h1>
-<div class="card-grid card-grid-4">
-<div class="card"><div class="card-icon"><i class="fas fa-chart-line"></i></div><h3>15.39% TIOBE</h3><p>Peringkat #1 dunia<br><small>TIOBE Index Jun 2024</small></p></div>
-<div class="card"><div class="card-icon"><i class="fas fa-users"></i></div><h3>44% Developer</h3><p>44.1% profesional developer<br><small>StackOverflow Survey 2024</small></p></div>
-<div class="card"><div class="card-icon"><i class="fas fa-boxes"></i></div><h3>500K+ Library</h3><p>523 ribu project<br><small>PyPI.org</small></p></div>
-<div class="card"><div class="card-icon"><i class="fas fa-feather"></i></div><h3>Syntax Simpel</h3><p>Kayak bahasa Inggris<br><small>print("halo") — 3 kata</small></p></div>
-</div>
-<div class="data-box"><strong>Data:</strong> TIOBE Index Juni 2024 — Python 15.39%, naik 2.15% dari tahun lalu. C: 10.03%. Java: 8.40%.</div>
-`,playground:`print("Python = #1 bahasa pemrograman!")
-print("TIOBE Index: 15.39%")
-print("StackOverflow: 44% developer")`},
-
-  { id:"1.2", part:1, title:"Python vs Bahasa Lain", icon:"fa-balance-scale",
-    breadcrumb:"Part 1: Kenapa Python?",
-    content:`<h1>Python vs Bahasa Pemrograman Lain</h1>
-<table class="comparison-table">
-<tr><th>Aspek</th><th class="hl">Python</th><th>Java</th><th>JavaScript</th><th>R</th><th>C++</th></tr>
-<tr><td><strong>Kegunaan</strong></td><td class="hl">AI, Data, Web</td><td>Mobile, Enterprise</td><td>Web, Browser</td><td>Statistik</td><td>Game, Sistem</td></tr>
-<tr><td><strong>Syntax</strong></td><td class="hl">Sangat Simpel</td><td>Menengah</td><td>Menengah</td><td>Menengah</td><td>Sulit</td></tr>
-<tr><td><strong>Belajar</strong></td><td class="hl">Paling Cepat</td><td>Sedang</td><td>Sedang</td><td>Sedang</td><td>Lambat</td></tr>
-<tr><td><strong>Gaji (US)</strong></td><td class="hl">$116K</td><td>$102K</td><td>$96K</td><td>$85K</td><td>$108K</td></tr>
-</table>
-<p class="text-muted">Sumber: TIOBE Index, StackOverflow Survey, Glassdoor 2024</p>`},
-
-  { id:"1.3", part:1, title:"Siapa yang Pakai Python?", icon:"fa-building",
-    breadcrumb:"Part 1: Kenapa Python?",
-    content:`<h1>Siapa yang Pakai Python?</h1>
-<div class="card-grid card-grid-3">
-<div class="card"><div class="card-icon" style="background:#FFF0F0;color:#DB4437"><i class="fab fa-google"></i></div><h3>Google</h3><p>TensorFlow, JAX, Colab<br>semua dibangun dengan Python</p></div>
-<div class="card"><div class="card-icon" style="background:#F0F0FF;color:#0B3D91"><i class="fas fa-rocket"></i></div><h3>NASA</h3><p>Analisis data rover Mars<br>pakai Python</p></div>
-<div class="card"><div class="card-icon" style="background:#FFF0F0;color:#E50914"><i class="fas fa-film"></i></div><h3>Netflix</h3><p>247M subscribers<br>recommendation engine Python</p></div>
-<div class="card"><div class="card-icon" style="background:#F0FFF0;color:#1DB954"><i class="fab fa-spotify"></i></div><h3>Spotify</h3><p>600M+ users<br>80% backend Python</p></div>
-<div class="card"><div class="card-icon" style="background:#FFF5F9;color:#E1306C"><i class="fab fa-instagram"></i></div><h3>Instagram</h3><p>800M+ users<br>Django framework (Python)</p></div>
-<div class="card"><div class="card-icon" style="background:#F5F5FF;color:#6366f1"><i class="fas fa-atom"></i></div><h3>OpenAI</h3><p>ChatGPT, GPT-4<br>research & backend Python</p></div>
-</div>`},
-
-  { id:"1.4", part:1, title:"Cara Kerja & Cocok Buat Pemula", icon:"fa-cogs",
-    breadcrumb:"Part 1: Kenapa Python?",
-    content:`<h1>Cara Kerja & Cocok Buat Pemula</h1>
-<div class="split">
-<div>
-<h3>Python = Interpreted Language</h3>
-<p>Kode Python dibaca <strong>baris per baris</strong> oleh Interpreter. Hasilnya langsung keluar.</p>
-<p class="text-pink">Beda sama C++ / Java</p><p>Yang harus di-<em>compile</em> dulu (bisa 5-10 menit) baru bisa jalan.</p>
-</div>
-<div>
-<h3>Kenapa Cocok Buat Pemula</h3>
-<ul class="checklist">
-<li><i class="fas fa-check-circle"></i> Instant feedback — ketik → Enter → lihat</li>
-<li><i class="fas fa-check-circle"></i> Syntax bersih — gak ada kurung kurawal, titik koma</li>
-<li><i class="fas fa-check-circle"></i> Komunitas supportif — jutaan tutorial gratis</li>
-<li><i class="fas fa-check-circle"></i> Langsung produktif — hari pertama udah bisa ngoding</li>
-</ul>
-</div></div>`,playground:`print("Python cocok buat pemula!")
-print("Karena: instant feedback")
-print("Syntax simpel")
-print("Komunitas besar")`},
-
-  // ===================== PART_OLD4 =====================
+  // ===================== PART 4 =====================
   { id:"4.1", part:4, title:"If-Else — Komputer Bikin Keputusan", icon:"fa-code-branch",
     breadcrumb:"Part 4: Logika Komputer",
     content:`<h1>If-Else — Komputer Bikin Keputusan</h1>
@@ -489,7 +490,7 @@ for i in range(1, 31):
     if i % 3 == 0:
         print(f"{i} kelipatan 3!")`},
 
-  // ===================== PART_OLD5 =====================
+  // ===================== PART 5 =====================
   { id:"5.1", part:5, title:"Rekap Semua Konsep", icon:"fa-star",
     breadcrumb:"Part 5: Penutupan",
     content:`<h1>Yang Sudah Kalian Pelajari</h1>
