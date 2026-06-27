@@ -4,16 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HerAI Mentoring: Python Kickstart</title>
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
     
-    <!-- Skulpt for Python execution -->
     <script src="https://cdn.jsdelivr.net/npm/skulpt@1.2.0/dist/skulpt.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/skulpt@1.2.0/dist/skulpt-stdlib.js"></script>
 </head>
@@ -27,41 +23,42 @@
         <div class="progress-container">
             <div class="progress-bar">
                 <div class="progress-fill" id="progressFill"></div>
-                <i class="fas fa-rocket rocket-icon" id="rocketIcon"></i>
             </div>
             <span class="progress-text" id="slideCountText">Sesi 2: Kickstart Python</span>
         </div>
     </header>
 
-    <!-- Fixed Mascot Guide -->
-    <div class="mascot-container" id="mascotGuide">
-        <div class="mascot-bubble" id="mascotText" style="transition: opacity 0.3s ease;">Hai, selamat datang! Scroll ke bawah untuk mulai ya! ✨</div>
-        <img src="referensi/persona-her-ai.png" alt="Persona" class="mascot-img" onerror="this.src='https://via.placeholder.com/200x250?text=Persona'">
+    <!-- Nav Arrows (PPT style) -->
+    <div class="nav-arrow nav-prev disabled" id="btnPrev" onclick="changeSlide(-1)">
+        <i class="fas fa-chevron-left"></i>
+    </div>
+    <div class="nav-arrow nav-next" id="btnNext" onclick="changeSlide(1)">
+        <i class="fas fa-chevron-right"></i>
     </div>
 
-    <!-- Scroll Snapping Container -->
+    <!-- Small Discrete Mascot -->
+    <div class="mascot-container" id="mascotGuide">
+        <div class="mascot-bubble" id="mascotText">Selamat datang! Tekan panah kanan untuk mulai presentasi.</div>
+        <img src="referensi/persona-her-ai.png" alt="Persona" class="mascot-img" onerror="this.src='https://via.placeholder.com/100x120?text=Persona'">
+    </div>
+
+    <!-- PPT Container -->
     <main class="story-container" id="storyContainer">
         
-        <!-- Slide 1: Welcome -->
-        <section class="slide" id="slide-0">
+        <!-- Slide 0: Welcome -->
+        <section class="slide active" id="slide-0">
             <div class="glass-card text-center hero-card">
-                <div class="glow-bg"></div>
-                <h1>Siap Membangun <br><span class="text-pink">Inovasi AI?</span></h1>
-                <p>Malam ini kita akan memastikan "alat tempur" kamu siap, dan merangkai baris kode Python pertamamu!</p>
-                <div class="bounce-arrow">
-                    <i class="fas fa-chevron-down"></i>
-                    <p>Scroll ke bawah</p>
+                <h1>Siap Membangun <br><span class="text-pink">Inovasi Teknologi?</span></h1>
+                <p>Malam ini kita akan memastikan alat tempur kamu siap, dan merangkai baris kode Python pertamamu.</p>
+                <div class="bounce-arrow" onclick="changeSlide(1)">
+                    Mulai Belajar <i class="fas fa-arrow-right" style="margin-left: 10px;"></i>
                 </div>
             </div>
         </section>
 
-        <!-- Dynamic slides will be injected here by app.js -->
-
     </main>
 
-    <!-- Load Content Array -->
     <script src="js/content.js"></script>
-    <!-- Application Logic -->
     <script src="js/app.js"></script>
 </body>
 </html>
