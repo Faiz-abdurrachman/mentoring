@@ -3,13 +3,13 @@ const COURSE = [
   { id:"1.1", part:1, title:"Apa Itu Python?", icon:"fa-laptop-code",
     breadcrumb:"19.00 | Pengenalan",
     content:`<div style="text-align:center; padding: 20px;">
-        <i class="fab fa-python" style="font-size: 80px; color: #3776AB; animation: bounce 2s infinite;"></i>
+        <i class="fab fa-python" style="font-size: 80px; color: #3776AB;"></i>
         <h1 style="font-size: 2.5rem; margin-top:20px;">Halo, Python!</h1>
         <p style="font-size: 1.2rem; color: #666;">Bahasa Pemrograman Paling Diminati di Dunia.</p>
         <div style="display:flex; justify-content:center; gap:20px; margin-top:30px;">
-            <div class="card" style="text-align:center; width:150px;"><i class="fas fa-brain fa-3x" style="color:#ff69b4"></i><p>Raja AI</p></div>
-            <div class="card" style="text-align:center; width:150px;"><i class="fas fa-chart-bar fa-3x" style="color:#ff69b4"></i><p>Data Science</p></div>
-            <div class="card" style="text-align:center; width:150px;"><i class="fas fa-globe fa-3x" style="color:#ff69b4"></i><p>Website Backend</p></div>
+            <div class="card" style="text-align:center; width:150px;"><i class="fas fa-chart-line fa-3x" style="color:var(--her-purple)"></i><p>Data & Analitik</p></div>
+            <div class="card" style="text-align:center; width:150px;"><i class="fas fa-cogs fa-3x" style="color:var(--her-purple)"></i><p>Automation</p></div>
+            <div class="card" style="text-align:center; width:150px;"><i class="fas fa-globe fa-3x" style="color:var(--her-purple)"></i><p>Web Backend</p></div>
         </div>
     </div>`},
 
@@ -59,7 +59,7 @@ const COURSE = [
   { id:"1.5", part:1, title:"Setup 2: VS Code", icon:"fa-code",
     breadcrumb:"19.00 | Persiapan",
     content:`<div style="text-align:center;">
-    <i class="fas fa-code fa-5x" style="color:#007ACC; margin-bottom:20px;"></i>
+    <i class="fas fa-laptop-code fa-5x" style="color:#007ACC; margin-bottom:20px;"></i>
     <h1>Install VS Code</h1>
     <p style="font-size:1.2rem;">Ini adalah "Buku Catatan" pintarmu. Mewarnai kode & mengecek salah ketik.</p>
     <br>
@@ -73,10 +73,10 @@ const COURSE = [
     </div>
 </div>`},
 
-  { id:"1.6", part:1, title:"Colab", icon:"fa-cloud",
+  { id:"1.6", part:1, title:"Colab", icon:"fa-google",
     breadcrumb:"19.00 | Persiapan",
     content:`<div style="text-align:center;">
-    <i class="fas fa-cloud fa-5x" style="color:#f4b400; margin-bottom:20px;"></i>
+    <i class="fab fa-google-drive fa-5x" style="color:#f4b400; margin-bottom:20px;"></i>
     <h1>Google Colab</h1>
     <p style="font-size:1.2rem;">Laptop error? Jangan panik. Buka <strong>colab.research.google.com</strong>.</p>
     <br>
@@ -336,21 +336,14 @@ print("Stok Habis!")`},
 `,playground:`for nomor in range(1, 6):
     print("Mencetak dokumen ke-", nomor)`},
 
-  { id:"4.4", part:4, title:"Mempersiapkan AI", icon:"fa-brain",
+  { id:"4.4", part:4, title:"Langkah Selanjutnya", icon:"fa-rocket",
     breadcrumb:"20.45 | Penutupan",
     content:`<div style="text-align:center; padding:20px;">
-    <i class="fas fa-brain fa-5x" style="color:var(--her-pink); margin-bottom:20px; animation: pulse 2s infinite;"></i>
-    <h1>Mempersiapkan Mindset AI</h1>
+    <i class="fas fa-rocket fa-5x" style="color:var(--her-pink); margin-bottom:20px;"></i>
+    <h1>Mempersiapkan Mindset Logika</h1>
     <p style="font-size:1.2rem;">Selamat! Malam ini kamu sudah mengerti bagaimana komputer menyimpan data (Variabel), mengambil keputusan (If-Else), dan bekerja otomatis (Loop).</p>
-    <p style="font-size:1.2rem; margin-top:20px;">Minggu depan, kita akan menggunakan <strong>Logika dan Perulangan ini</strong> untuk membedah ribuan baris data dan merubah rumus matematika AI menjadi kenyataan.</p>
-</div>
-<style>
-@keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.1); box-shadow: 0 0 20px var(--her-pink); border-radius:50%; }
-  100% { transform: scale(1); }
-}
-</style>`}
+    <p style="font-size:1.2rem; margin-top:20px;">Minggu depan, kita akan menggunakan <strong>Logika dan Perulangan ini</strong> untuk membedah ribuan baris data sungguhan di industri.</p>
+</div>`},
 
 ];
 
