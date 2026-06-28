@@ -1,53 +1,7 @@
 const COURSE = [
-  // ===================== MODULE 1: TECHNICAL SETUP =====================
-  { id:"1.1", part:1, title:"Instalasi & Setup Local", icon:"fa-download",
-    breadcrumb:"19.00 | Technical Setup",
-    content:`<h1>Instalasi Local Environment</h1>
-<p>Sebelum mulai coding, kita butuh "bengkel" kerja di laptop kalian.</p>
-<div class="split">
-<div>
-<h3>1. Install Python</h3>
-<p>Download dari <strong>python.org</strong>. <br><span class="text-pink">SANGAT KRUSIAL:</span></p>
-<div class="err-box">Wajib centang <strong>"Add Python to PATH"</strong> saat instalasi. Jika lupa, terminal tidak akan mengenali perintah <code>python</code>!</div>
-</div>
-<div>
-<h3>2. Install VS Code</h3>
-<p>Editor kode terpopuler. Buka VS Code, tekan <kbd>Ctrl+Shift+X</kbd> dan install ekstensi <strong>"Python"</strong>.</p>
-</div>
-</div>`},
-
-  { id:"1.2", part:1, title:"Terminal & Virtual Env", icon:"fa-terminal",
-    breadcrumb:"19.00 | Technical Setup",
-    content:`<h1>Terminal & Virtual Environment</h1>
-<p>Terminal (CMD/PowerShell) adalah tempat kita mengetik perintah langsung ke sistem komputer.</p>
-<h3>Virtual Environment (venv)</h3>
-<p>Membuat "ruangan isolasi" agar *library* di proyek kalian tidak bentrok satu sama lain.</p>
-<div class="block-code">
-<span class="cm"># 1. Buka terminal VS Code (Ctrl+\`)</span><br>
-<span class="cm"># 2. Buat ruang isolasi (venv)</span><br>
-python -m venv env<br><br>
-<span class="cm"># 3. Aktifkan venv (Windows)</span><br>
-.\\env\\Scripts\\activate
-</div>
-<div class="warn-box">Ciri venv aktif: Ada tulisan <strong>(env)</strong> di terminal kalian.</div>`},
-
-  { id:"1.3", part:1, title:"Google Colab & T4 GPU", icon:"fa-cloud",
-    breadcrumb:"19.00 | Technical Setup",
-    content:`<h1>Alternatif: Google Colab</h1>
-<p>Jika laptop bermasalah, jangan panik! Kita bisa pakai "laptop cloud" gratis milik Google: <strong>Google Colab</strong>.</p>
-<ul class="checklist">
-<li><i class="fas fa-check-circle"></i> Buka <strong>colab.research.google.com</strong>.</li>
-<li><i class="fas fa-check-circle"></i> Berjalan di browser tanpa perlu install apapun.</li>
-<li><i class="fas fa-check-circle"></i> Pilih menu Runtime > Change runtime type > Pilih <strong>T4 GPU</strong> (Sangat krusial untuk melatih AI).</li>
-</ul>
-<div class="ok-box">Untuk latihan malam ini, gunakan <strong>Playground Interaktif</strong> di bawah layar ini!</div>
-`,playground:`print("Setup Selesai!")
-print("Siap masuk materi pertama.")`},
-
-
-  // ===================== MODULE 2: MY FIRST PYTHON CODE =====================
-  { id:"2.1", part:2, title:"Apa itu Programming & Python?", icon:"fa-laptop-code",
-    breadcrumb:"19.30 | My First Python Code",
+  // ===================== MODULE 1: PENGENALAN & SETUP =====================
+  { id:"1.1", part:1, title:"Apa itu Programming & Python?", icon:"fa-laptop-code",
+    breadcrumb:"19.00 | Pengenalan & Setup",
     content:`<h1>Apa itu Programming & Python?</h1>
 <div class="split">
 <div>
@@ -61,8 +15,8 @@ print("Siap masuk materi pertama.")`},
 </div>
 `},
 
-  { id:"2.1b", part:2, title:"Kenapa Harus Python?", icon:"fa-brain",
-    breadcrumb:"19.30 | My First Python Code",
+  { id:"1.2", part:1, title:"Kenapa Harus Python?", icon:"fa-brain",
+    breadcrumb:"19.00 | Pengenalan & Setup",
     content:`<h1>Kenapa Harus Python?</h1>
 <p>Kenapa kita tidak belajar Java atau C++ saja? Karena Python adalah bahasa yang menggerakkan raksasa teknologi saat ini.</p>
 <div class="card-grid card-grid-3">
@@ -72,8 +26,8 @@ print("Siap masuk materi pertama.")`},
 </div>
 <p class="text-muted" style="margin-top:20px; font-size:1.05rem;">Selain sangat laku di industri (Gaji rata-rata $116K di US), Python adalah <strong>bahasa paling ramah untuk pemula</strong> yang belum pernah ngoding sama sekali.</p>`},
 
-  { id:"2.2", part:2, title:"Compiler vs Interpreter", icon:"fa-language",
-    breadcrumb:"19.30 | My First Python Code",
+  { id:"1.3", part:1, title:"Compiler vs Interpreter", icon:"fa-language",
+    breadcrumb:"19.00 | Pengenalan & Setup",
     content:`<h1>Compiler vs Interpreter</h1>
 <p>Bagaimana cara komputer mengerti dan menjalankan kode Python kita?</p>
 <table class="comparison-table">
@@ -83,7 +37,53 @@ print("Siap masuk materi pertama.")`},
 </table>
 <p class="text-muted">Kelebihan Interpreter: Jika kalian menulis 10 baris dan baris ke-5 error, baris 1-4 tetap akan jalan terlebih dahulu.</p>`},
 
-  { id:"2.3", part:2, title:"print()", icon:"fa-print",
+  { id:"1.4", part:1, title:"Instalasi & Setup Local", icon:"fa-download",
+    breadcrumb:"19.00 | Pengenalan & Setup",
+    content:`<h1>Instalasi Local Environment</h1>
+<p>Nah, setelah tahu betapa kerennya Python, sekarang saatnya kita menyiapkan "bengkel" kerja di laptop kalian.</p>
+<div class="split">
+<div>
+<h3>1. Install Python</h3>
+<p>Download dari <strong>python.org</strong>. <br><span class="text-pink">SANGAT KRUSIAL:</span></p>
+<div class="err-box">Wajib centang <strong>"Add Python to PATH"</strong> saat instalasi. Jika lupa, terminal tidak akan mengenali perintah <code>python</code>!</div>
+</div>
+<div>
+<h3>2. Install VS Code</h3>
+<p>Editor kode terpopuler. Buka VS Code, tekan <kbd>Ctrl+Shift+X</kbd> dan install ekstensi <strong>"Python"</strong>.</p>
+</div>
+</div>`},
+
+  { id:"1.5", part:1, title:"Terminal & Virtual Env", icon:"fa-terminal",
+    breadcrumb:"19.00 | Pengenalan & Setup",
+    content:`<h1>Terminal & Virtual Environment</h1>
+<p>Terminal (CMD/PowerShell) adalah tempat kita mengetik perintah langsung ke sistem komputer.</p>
+<h3>Virtual Environment (venv)</h3>
+<p>Membuat "ruangan isolasi" agar *library* di proyek kalian tidak bentrok satu sama lain.</p>
+<div class="block-code">
+<span class="cm"># 1. Buka terminal VS Code (Ctrl+\`)</span><br>
+<span class="cm"># 2. Buat ruang isolasi (venv)</span><br>
+python -m venv env<br><br>
+<span class="cm"># 3. Aktifkan venv (Windows)</span><br>
+.\\env\\Scripts\\activate
+</div>
+<div class="warn-box">Ciri venv aktif: Ada tulisan <strong>(env)</strong> di terminal kalian.</div>`},
+
+  { id:"1.6", part:1, title:"Google Colab & T4 GPU", icon:"fa-cloud",
+    breadcrumb:"19.00 | Pengenalan & Setup",
+    content:`<h1>Alternatif: Google Colab</h1>
+<p>Jika laptop bermasalah saat instalasi tadi, jangan panik! Kita bisa pakai "laptop cloud" gratis milik Google: <strong>Google Colab</strong>.</p>
+<ul class="checklist">
+<li><i class="fas fa-check-circle"></i> Buka <strong>colab.research.google.com</strong>.</li>
+<li><i class="fas fa-check-circle"></i> Berjalan di browser tanpa perlu install apapun.</li>
+<li><i class="fas fa-check-circle"></i> Pilih menu Runtime > Change runtime type > Pilih <strong>T4 GPU</strong> (Sangat krusial untuk melatih AI).</li>
+</ul>
+<div class="ok-box">Untuk latihan malam ini, gunakan <strong>Playground Interaktif</strong> di bawah layar ini!</div>
+`,playground:`print("Setup Selesai!")
+print("Siap masuk materi pertama.")`},
+
+
+  // ===================== MODULE 2: MY FIRST PYTHON CODE =====================
+  { id:"2.1", part:2, title:"print()", icon:"fa-print",
     breadcrumb:"19.30 | My First Python Code",
     content:`<h1>Fungsi print()</h1>
 <p>Fungsi <code>print()</code> adalah cara kita menyuruh komputer menampilkan tulisan atau hasil perhitungan ke layar.</p>
@@ -94,7 +94,7 @@ print("Siap masuk materi pertama.")`},
 print("Halo Mentor!")
 print("Saya siap belajar Python")`},
 
-  { id:"2.4", part:2, title:"Variable", icon:"fa-box",
+  { id:"2.2", part:2, title:"Variable", icon:"fa-box",
     breadcrumb:"19.30 | My First Python Code",
     content:`<h1>Variable (Kotak Penyimpanan)</h1>
 <p>Variabel seperti "kotak berlabel" yang digunakan untuk menyimpan data. Isinya bisa diubah kapan saja.</p>
@@ -110,7 +110,7 @@ poin = 100
 print("Poin baru:")
 print(poin)`},
 
-  { id:"2.5", part:2, title:"Data Type", icon:"fa-shapes",
+  { id:"2.3", part:2, title:"Data Type", icon:"fa-shapes",
     breadcrumb:"19.30 | My First Python Code",
     content:`<h1>Data Type (Tipe Data)</h1>
 <p>Komputer harus tahu jenis data apa yang ada di dalam variabel tersebut agar tidak salah perlakuan.</p>
@@ -130,7 +130,7 @@ benar = True
 print(type(teks))
 print(type(desimal))`},
 
-  { id:"2.6", part:2, title:"Input", icon:"fa-keyboard",
+  { id:"2.4", part:2, title:"Input", icon:"fa-keyboard",
     breadcrumb:"19.30 | My First Python Code",
     content:`<h1>Input dari User</h1>
 <p>Program yang statis itu membosankan. Kita bisa memakai <code>input()</code> agar program menanyakan sesuatu ke pengguna yang memakai program tersebut.</p>
@@ -142,7 +142,7 @@ nama = input("Masukkan nama jagoanmu:")
 print("Selamat bertarung,")
 print(nama)`},
 
-  { id:"2.7", part:2, title:"Operator Matematika", icon:"fa-calculator",
+  { id:"2.5", part:2, title:"Operator Matematika", icon:"fa-calculator",
     breadcrumb:"19.30 | My First Python Code",
     content:`<h1>Operator & Operasi Matematika</h1>
 <p>Sebagai fondasi Data Science, perhitungan adalah hal mutlak di Python.</p>
@@ -161,7 +161,7 @@ print(10 / 3)
 print("Kalau Modulo (sisa bagi) dari 10 % 3?")
 print(10 % 3)`},
 
-  { id:"2.8", part:2, title:"Type Conversion", icon:"fa-exchange-alt",
+  { id:"2.6", part:2, title:"Type Conversion", icon:"fa-exchange-alt",
     breadcrumb:"19.30 | My First Python Code",
     content:`<h1>Type Conversion</h1>
 <p>Ingat, <code>input()</code> selalu menghasilkan teks (String). Jika kita ingin melakukan hitungan matematika pada input tersebut, kita WAJIB mengubah tipe datanya (Type Conversion/Casting).</p>
