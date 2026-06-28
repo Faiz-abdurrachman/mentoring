@@ -1,5 +1,4 @@
 /* Her AI Gamified Journey - Clean & Elegant Theme */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap');
 
 :root {
     --her-pink: #FF1493;
@@ -17,7 +16,7 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     color: var(--text-main);
     background-color: var(--her-bg);
     overflow-x: hidden;
@@ -32,7 +31,7 @@ body {
                 radial-gradient(circle at 85% 30%, rgba(138, 43, 226, 0.1) 0%, transparent 50%);
 }
 
-h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; color: var(--her-purple); margin-bottom: 15px; font-weight: 700; letter-spacing: -0.5px;}
+h1, h2, h3 { font-family: 'Plus Jakarta Sans', sans-serif; color: var(--her-purple); margin-bottom: 15px; font-weight: 700; letter-spacing: -0.5px;}
 p { font-size: 1.1rem; line-height: 1.6; margin-bottom: 15px; }
 .text-pink { color: var(--her-pink); }
 .text-purple { color: var(--her-purple); }
@@ -131,7 +130,7 @@ th { background: rgba(255, 105, 180, 0.05); color: var(--her-purple); font-weigh
     box-shadow: 0 10px 30px rgba(0,0,0,0.15); border: 1px solid #2D3748;
 }
 .ide-header {
-    background: #2D3748; padding: 10px 20px; display: flex; justify-content: space-between; align-items: center; color: #A0AEC0; font-family: 'Inter', sans-serif; font-size: 0.85rem;
+    background: #2D3748; padding: 10px 20px; display: flex; justify-content: space-between; align-items: center; color: #A0AEC0; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.85rem;
 }
 .ide-title { font-weight: 600; color: #E2E8F0; display: flex; align-items: center; gap: 8px;}
 .ide-body { position: relative; background: #1A202C; }
@@ -182,7 +181,7 @@ th { background: rgba(255, 105, 180, 0.05); color: var(--her-purple); font-weigh
 }
 .hero-title {
     font-size: 3.5rem; line-height: 1.1; margin-bottom: 25px;
-    color: var(--text-main); font-family: 'Space Grotesk', sans-serif;
+    color: var(--text-main); font-family: 'Plus Jakarta Sans', sans-serif;
 }
 .hero-title span {
     background: linear-gradient(135deg, var(--her-pink), var(--her-purple));
