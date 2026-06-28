@@ -239,27 +239,11 @@ print("Stok habis!")`},
 <div class="block-code"><span class="cm"># Berhenti SEBELUM angka 6</span>
 <span class="kw">for</span> i <span class="kw">in</span> <span class="fn">range</span>(1, 6):
     <span class="fn">print</span>(<span class="st">"Putaran ke-"</span>, i)</div>
-<p style="margin-top:10px">Sangat berguna untuk membaca isi list data satu per satu, yang akan kita pelajari nanti.</p>
+<div class="ok-box"><strong>ANTI PANIK:</strong> Kalian tidak perlu menghafal cara menulis <code>while</code> atau <code>for</code> malam ini! Cukup pahami bahwa komputer punya kemampuan ajaib untuk mengulang perintah ribuan kali tanpa capek.</div>
 `,playground:`for nomor in range(1, 6):
     print("Mencetak dokumen ke-", nomor)`},
 
-  { id:"3.6", part:3, title:"Kendali Loop", icon:"fa-stop-circle",
-    breadcrumb:"20.15 | Logika Alur",
-    content:`<h1>Kendali Loop: break & continue</h1>
-<p>Memanipulasi perulangan dari dalam:</p>
-<ul class="checklist">
-<li><code>break</code>: Keluar dari loop sepenuhnya sekarang juga (Stop total).</li>
-<li><code>continue</code>: Lewati sisa kode di bawahnya, dan langsung lompat lanjut ke putaran loop berikutnya (Skip 1 putaran).</li>
-<li><code>pass</code>: Baris kosong yang tidak melakukan apa-apa, mencegah error saat kita sedang mengetik struktur kode.</li>
-</ul>
-`,playground:`for lantai in range(1, 6):
-    if lantai == 4:
-        print("Lantai 4 di-skip!")
-        continue
-    
-    print("Berada di lantai:", lantai)`},
-
-  { id:"3.7", part:3, title:"Jembatan Logika Akhir", icon:"fa-brain",
+  { id:"3.6", part:3, title:"Jembatan Logika Akhir", icon:"fa-brain",
     breadcrumb:"Penutupan Sesi",
     content:`<h1>Mempersiapkan Mindset AI</h1>
 <p>Selamat! Malam ini kamu sudah mengerti bagaimana komputer menyimpan data (Variabel), mengambil keputusan (If-Else), dan bekerja keras otomatis (Loop).</p>
