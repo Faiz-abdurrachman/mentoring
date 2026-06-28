@@ -110,12 +110,12 @@ umur = 20
 </div>
 <p style="font-size:1.1rem">Tanda <code>=</code> artinya <strong>"SIMPAN"</strong> atau <strong>"MASUKKAN"</strong> (dari Kanan ke Kiri).</p>
 <div class="block-code">
-nyawa = 3
+koleksi_lipstik = 3
 </div>
-<p>Komputer membaca: <i>"Ambil angka 3 (Kanan), lalu MASUKKAN ke dalam Laci bernama 'nyawa' (Kiri)."</i></p>
-`,playground:`nyawa = 3
-print("Jumlah nyawa awal:")
-print(nyawa)`},
+<p>Komputer membaca: <i>"Ambil angka 3 (Kanan), lalu MASUKKAN ke dalam Laci bernama 'koleksi_lipstik' (Kiri)."</i></p>
+`,playground:`koleksi_lipstik = 3
+print("Jumlah lipstik awal:")
+print(koleksi_lipstik)`},
 
   { id:"2.4", part:2, title:"Aturan Penamaan", icon:"fa-spell-check",
     breadcrumb:"Hands-On Dasar",
@@ -135,16 +135,16 @@ print(nyawa)`},
     content:`<h1>Nilai Variabel Bisa Berubah!</h1>
 <p style="font-size:1.1rem">Sesuai namanya, "Variabel" berarti bisa bervariasi (berubah). Analogi Gelas Kopi: Kalau gelas awalnya isi Kopi, lalu kamu paksa tuang Jus Jeruk ke dalamnya, kopinya akan <strong>terbuang/ditimpa</strong> dan gelas itu sekarang murni berisi Jus Jeruk.</p>
 <div class="block-code">
-skor = 10<br>
-skor = 50 <span class="cm"># Angka 10 dihapus, diganti 50</span>
+stok_serum = 1<br>
+stok_serum = 5 <span class="cm"># Angka 1 dihapus, diganti 5</span>
 </div>
-`,playground:`skor = 10
-print("Skor awal:")
-print(skor)
+`,playground:`stok_serum = 1
+print("Stok awal:")
+print(stok_serum)
 
-skor = 50
-print("Skor sekarang:")
-print(skor)`},
+stok_serum = 5
+print("Stok setelah restock:")
+print(stok_serum)`},
 
   { id:"2.6", part:2, title:"Tipe Data String", icon:"fa-font",
     breadcrumb:"Hands-On Dasar",
@@ -173,13 +173,13 @@ print(teks_1 + teks_2)`},
 <tr><td><code>*</code></td><td>Kali</td></tr>
 <tr><td><code>/</code></td><td>Bagi (Hasilnya akan jadi desimal)</td></tr>
 </table>
-`,playground:`angka_1 = 10
-angka_2 = 10
+`,playground:`harga_lipstik = 100000
+harga_bedak = 50000
 
-print("Hasil penambahan matematika:")
-print(angka_1 + angka_2)
-print("Hasil kali matematika:")
-print(angka_1 * angka_2)`},
+print("Total belanjaan matematika:")
+print(harga_lipstik + harga_bedak)
+print("Harga lipstik diskon 50% (dibagi 2):")
+print(harga_lipstik / 2)`},
 
   { id:"2.8", part:2, title:"Tipe Data Float & Bool", icon:"fa-percentage",
     breadcrumb:"Hands-On Dasar",
@@ -216,19 +216,19 @@ print(nama)`},
 <div class="err-box" style="font-size:1.1rem; text-align:center">
     Semua data yang masuk lewat <code>input()</code> <strong>selalu ditangkap sebagai String (Teks)!</strong>
 </div>
-<p style="margin-top:15px; font-size:1.1rem">Jika kamu menanyakan umur pakai <code>input()</code>, hasilnya adalah "20" bukan angka 20. Ubah dulu jadi angka agar bisa dihitung!</p>
+<p style="margin-top:15px; font-size:1.1rem">Jika kamu menanyakan umur pakai <code>input()</code>, hasilnya adalah "20" (Teks) bukan angka 20. Ubah dulu jadi angka agar bisa dihitung pakai matematika!</p>
 <ul class="checklist" style="font-size:1.1rem">
     <li><code>int(x)</code> &rarr; Mengubah teks x jadi Angka Bulat</li>
     <li><code>str(x)</code> &rarr; Mengubah angka x jadi Teks String</li>
 </ul>
-`,playground:`umur_teks = input("Berapa umur kamu? ")
+`,playground:`ukuran_teks = input("Berapa ukuran sepatu heels kamu? ")
 
 # Konversi String ke Integer
-umur_angka = int(umur_teks)
+ukuran_angka = int(ukuran_teks)
 
-tahun_lahir = 2026 - umur_angka
-print("Tahun lahir kamu sekitar:")
-print(tahun_lahir)`},
+ukuran_eropa = ukuran_angka + 10
+print("Ukuran Eropa sepatu kamu sekitar:")
+print(ukuran_eropa)`},
 
 
   // ===================== MODULE 3: CONDITIONALS =====================
@@ -266,14 +266,14 @@ print("mangga" == "Mangga") # Perhatikan huruf besar/kecil!`},
     <p><strong>Salah Satu</strong> True Sudah Cukup.<br>(Bayar Belanjaan: Pakai QRIS <i>OR</i> Cash. Dua-duanya sah!)</p>
 </div>
 </div>
-`,playground:`punya_ktp = True
-punya_sim = False
+`,playground:`bawa_cushion = True
+bawa_lipstik = False
 
-print("Pengecekan AND (Wajib Dua-duanya):")
-print(punya_ktp and punya_sim)
+print("Pengecekan AND (Wajib Dua-duanya buat dandan):")
+print(bawa_cushion and bawa_lipstik)
 
-print("Pengecekan OR (Salah Satu Boleh):")
-print(punya_ktp or punya_sim)`},
+print("Pengecekan OR (Minimal ada satu, muka tetep aman):")
+print(bawa_cushion or bawa_lipstik)`},
 
   { id:"3.3", part:3, title:"Konsep Percabangan", icon:"fa-code-branch",
     breadcrumb:"Logika Alur",
@@ -296,49 +296,49 @@ print(punya_ktp or punya_sim)`},
 </div>
 <p style="font-size:1.1rem">Jika baris kedua disejajarkan lurus dengan kata <code>if</code>, komputer bingung mana kode yang menjadi "milik" percabangan tersebut, karena tidak ada yang dikelompokkan ke dalam.</p>
 `,playground:`# Coba hilangkan spasinya dan lihat apa yang terjadi (Error!)
-uang = 50000
+budget = 500000
 
-if uang >= 20000:
-    print("Uang cukup! Beli Kopi.")
-    print("Transaksi berhasil.")`},
+if budget >= 200000:
+    print("Budget cukup! Beli Skincare.")
+    print("Checkout keranjang berhasil.")`},
 
   { id:"3.5", part:3, title:"IF-ELSE (Dua Jalur)", icon:"fa-random",
     breadcrumb:"Logika Alur",
     content:`<h1>IF-ELSE (Jika Tidak)</h1>
 <p style="font-size:1.1rem">Bagaimana kalau syaratnya gagal (False)? Kita gunakan <code>else</code> sebagai Rencana B.</p>
 <div class="block-code" style="font-size:0.95rem">
-<span class="kw">if</span> cuaca == <span class="st">"Hujan"</span>:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="fn">print</span>(<span class="st">"Bawa Payung!"</span>) <span class="cm"># Rencana A</span><br>
+<span class="kw">if</span> cuaca == <span class="st">"Mendung"</span>:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="fn">print</span>(<span class="st">"Bawa Payung & Pakai Cardigan!"</span>) <span class="cm"># Rencana A</span><br>
 <span class="kw">else</span>:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="fn">print</span>(<span class="st">"Jalan santai."</span>) <span class="cm"># Rencana B</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="fn">print</span>(<span class="st">"Pakai Kacamata Hitam."</span>) <span class="cm"># Rencana B</span>
 </div>
 <div class="warn-box" style="font-size:1.05rem">Perintah <code>else</code> <strong>TIDAK</strong> membutuhkan syarat perbandingan. Ia otomatis menampung semua kemungkinan yang gagal dari <code>if</code>.</div>
-`,playground:`uang = 15000
+`,playground:`budget = 150000
 
-if uang >= 20000:
-    print("Beli Kopi!") 
+if budget >= 200000:
+    print("Yeay! Beli Skincare.") 
 else:
-    print("Uang kurang, beli es teh saja.") `},
+    print("Budget kurang, beli sheet mask saja.") `},
 
   { id:"3.6", part:3, title:"IF-ELIF-ELSE", icon:"fa-road",
     breadcrumb:"Logika Alur",
     content:`<h1>Banyak Kemungkinan (ELIF)</h1>
 <p style="font-size:1.1rem">Jika ada 3 jalur atau lebih, gunakan <code>elif</code> (Else-If / Atau-Jika). Python akan mengecek dari atas ke bawah secara berurutan.</p>
 <div class="block-code" style="font-size:0.9rem">
-<span class="kw">if</span> suhu > <span class="nu">32</span>:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="fn">print</span>(<span class="st">"Cuaca panas! Nyalakan AC."</span>)<br>
-<span class="kw">elif</span> suhu > <span class="nu">25</span>:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="fn">print</span>(<span class="st">"Cuaca hangat."</span>)<br>
+<span class="kw">if</span> cuaca_suhu > <span class="nu">32</span>:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="fn">print</span>(<span class="st">"Panas terik! Wajib Sunscreen SPF 50+."</span>)<br>
+<span class="kw">elif</span> cuaca_suhu > <span class="nu">25</span>:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="fn">print</span>(<span class="st">"Cuaca hangat. Pakai Sunscreen biasa."</span>)<br>
 <span class="kw">else</span>:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="fn">print</span>(<span class="st">"Cuaca dingin, ambil jaket."</span>)
 </div>
-`,playground:`suhu = 35
+`,playground:`cuaca_suhu = 35
 
 # Silakan ubah angka suhunya dan jalankan!
-if suhu > 32:
-    print("Cuaca panas! Nyalakan AC.")
-elif suhu > 25:
-    print("Cuaca hangat.")
+if cuaca_suhu > 32:
+    print("Panas terik! Wajib Sunscreen SPF 50+.")
+elif cuaca_suhu > 25:
+    print("Cuaca hangat. Pakai Sunscreen biasa.")
 else:
     print("Cuaca dingin, ambil jaket.")`},
 
@@ -368,16 +368,16 @@ else:
 <div class="warn-box" style="font-size:1.1rem">
     Jika kamu memakai <code>while</code>, pastikan variabel kondisinya <strong>berubah</strong> di dalam blok kode. Jika nilainya tidak pernah berubah, loop akan berjalan abadi (komputer nge-hang)!
 </div>
-`,playground:`stok = 3
+`,playground:`kapas_kotor = 3
 
-while stok > 0:
-    print("Jual Barang. Sisa:", stok)
+while kapas_kotor > 0:
+    print("Usap Micellar Water ke wajah. Sisa kapas kotor:", kapas_kotor)
     
     # Pengurangan ini SANGAT PENTING!
     # Hapus baris ini kalau berani bikin laptop ngadat!
-    stok = stok - 1
+    kapas_kotor = kapas_kotor - 1
     
-print("Stok Habis!")`},
+print("Wajah Bersih!")`},
 
   { id:"4.4", part:4, title:"Analogi For Loop", icon:"fa-users",
     breadcrumb:"Logika Alur",
@@ -396,12 +396,12 @@ print("Stok Habis!")`},
 <div class="block-code" style="font-size:0.95rem">
 <span class="cm"># range(1, 6) menghasilkan angka 1 sampai 5.</span><br>
 <span class="cm"># Ia berhenti SEBELUM angka batas akhir!</span><br>
-<span class="kw">for</span> nomor <span class="kw">in</span> <span class="fn">range</span>(1, 6):<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="fn">print</span>(<span class="st">"Putaran ke-"</span>, nomor)
+<span class="kw">for</span> langkah <span class="kw">in</span> <span class="fn">range</span>(1, 4):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="fn">print</span>(<span class="st">"Skincare Routine Step ke-"</span>, langkah)
 </div>
 <div class="ok-box"><strong>ANTI PANIK:</strong> Jangan dipaksa hafal malam ini! Cukup pahami kapan harus pakai For (jumlah pasti) dan kapan pakai While (menunggu kondisi selesai).</div>
-`,playground:`for nomor in range(1, 6):
-    print("Mencetak halaman ke-", nomor)`},
+`,playground:`for langkah in range(1, 4):
+    print("Skincare Routine Step ke-", langkah)`},
 
   { id:"4.6", part:4, title:"Langkah Selanjutnya", icon:"fa-rocket",
     breadcrumb:"Penutupan",
