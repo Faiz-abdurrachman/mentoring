@@ -1,16 +1,16 @@
 const COURSE = [
   // ===================== MODULE 1: PENGENALAN & SETUP =====================
-  { id:"1.1", part:1, title:"Apa itu Programming & Python?", icon:"fa-laptop-code",
+  { id:"1.1", part:1, title:"Apa itu Python?", icon:"fa-laptop-code",
     breadcrumb:"19.00 | Pengenalan & Setup",
-    content:`<h1>Apa itu Programming & Python?</h1>
+    content:`<h1>Apa itu Python?</h1>
 <div class="split">
 <div>
-<h3>Programming</h3>
-<p>Komputer itu super cepat, tapi tidak bisa berpikir sendiri. <strong>Programming</strong> adalah cara kita memberinya urutan instruksi yang jelas.</p>
+<h3>Bahasa Masa Depan</h3>
+<p>Python adalah bahasa pemrograman nomor #1 di dunia. Dirancang agar sangat mudah dibaca karena menyerupai bahasa Inggris sehari-hari.</p>
 </div>
 <div>
-<h3>Python</h3>
-<p>Python dirancang agar mirip dengan bahasa Inggris. Ini adalah bahasa pemrograman nomor #1 untuk kecerdasan buatan (AI) dan Data Science.</p>
+<h3>Otak di Balik AI</h3>
+<p>Kecerdasan Buatan (AI) dan Data Science yang sedang mengubah dunia saat ini, sebagian besar dibangun menggunakan struktur Python.</p>
 </div>
 </div>
 `},
