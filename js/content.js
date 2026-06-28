@@ -1,7 +1,7 @@
 const COURSE = [
   // ===================== MODULE 1: SETUP & PENGENALAN =====================
   { id:"1.1", part:1, title:"Apa Itu Python?", icon:"fa-laptop-code",
-    breadcrumb:"19.00 | Pengenalan",
+    breadcrumb:"Pengenalan",
     content:`<div style="text-align:center; padding: 20px;">
         <i class="fab fa-python" style="font-size: 80px; color: #3776AB;"></i>
         <h1 style="font-size: 2.5rem; margin-top:20px;">Halo, Python!</h1>
@@ -14,7 +14,7 @@ const COURSE = [
     </div>`},
 
   { id:"1.2", part:1, title:"Python vs Java", icon:"fa-balance-scale",
-    breadcrumb:"19.00 | Pengenalan",
+    breadcrumb:"Pengenalan",
     content:`<h1 style="text-align:center">Kenapa Python?</h1>
 <div class="split" style="margin-top:30px;">
 <div style="text-align:center; border: 2px solid #ff4d4d; padding:15px; border-radius:10px; background:#fff0f0">
@@ -30,7 +30,7 @@ const COURSE = [
 </div>`},
 
   { id:"1.3", part:1, title:"Kecepatan Menulis", icon:"fa-tachometer-alt",
-    breadcrumb:"19.00 | Pengenalan",
+    breadcrumb:"Pengenalan",
     content:`<h1>Buktikan Sendiri Kecepatannya!</h1>
 <div style="margin-top:20px;">
 <p style="font-weight:bold; color:#ff4d4d"><i class="fas fa-times-circle"></i> Java (Mencetak teks):</p>
@@ -44,7 +44,7 @@ const COURSE = [
 </div>`},
 
   { id:"1.4", part:1, title:"Setup 1: Python", icon:"fa-download",
-    breadcrumb:"19.00 | Persiapan",
+    breadcrumb:"Persiapan",
     content:`<div style="text-align:center;">
     <i class="fab fa-python fa-5x" style="color:#3776AB; margin-bottom:20px;"></i>
     <h1>Install Mesin Python</h1>
@@ -57,7 +57,7 @@ const COURSE = [
 </div>`},
 
   { id:"1.5", part:1, title:"Setup 2: VS Code", icon:"fa-code",
-    breadcrumb:"19.00 | Persiapan",
+    breadcrumb:"Persiapan",
     content:`<div style="text-align:center;">
     <i class="fas fa-laptop-code fa-5x" style="color:#007ACC; margin-bottom:20px;"></i>
     <h1>Install VS Code</h1>
@@ -74,7 +74,7 @@ const COURSE = [
 </div>`},
 
   { id:"1.6", part:1, title:"Colab", icon:"fa-google",
-    breadcrumb:"19.00 | Persiapan",
+    breadcrumb:"Persiapan",
     content:`<div style="text-align:center;">
     <i class="fab fa-google-drive fa-5x" style="color:#f4b400; margin-bottom:20px;"></i>
     <h1>Google Colab</h1>
@@ -91,7 +91,7 @@ print("Siap belajar Python!")`},
 
   // ===================== MODULE 2: VARIABEL & DATA =====================
   { id:"2.1", part:2, title:"Menampilkan Teks", icon:"fa-print",
-    breadcrumb:"19.30 | Hands-On Dasar",
+    breadcrumb:"Hands-On Dasar",
     content:`<h1>Mencetak Teks: print()</h1>
 <p style="font-size:1.1rem">Ini adalah perintah ajaib agar komputer berbicara ke layar.</p>
 <div class="block-code" style="font-size:1.2rem"><span class="fn">print</span>(<span class="st">"Halo Dunia"</span>)</div>
@@ -104,7 +104,7 @@ print("Hello World")
 print("Halo dari Indonesia")`},
 
   { id:"2.2", part:2, title:"Konsep Variabel", icon:"fa-box-open",
-    breadcrumb:"19.30 | Hands-On Dasar",
+    breadcrumb:"Hands-On Dasar",
     content:`<h1 style="text-align:center">Variabel = Kotak Penyimpanan</h1>
 <div style="text-align:center; padding:20px;">
     <i class="fas fa-box-open fa-5x" style="color:#d4a373; margin-bottom:10px;"></i>
@@ -118,7 +118,7 @@ print("Halo dari Indonesia")`},
 `},
 
   { id:"2.3", part:2, title:"Visualisasi Variabel", icon:"fa-eye",
-    breadcrumb:"19.30 | Hands-On Dasar",
+    breadcrumb:"Hands-On Dasar",
     content:`<h1>Apa Maksud Tanda Sama Dengan (=) ?</h1>
 <div class="err-box" style="font-size:1.1rem">
     Di Python, tanda <code>=</code> <strong>BUKAN</strong> berarti kesamaan matematika!
@@ -139,7 +139,7 @@ print("Sisa Nyawa:")
 print(nyawa)`},
 
   { id:"2.4", part:2, title:"Tipe Data 1", icon:"fa-font",
-    breadcrumb:"19.30 | Hands-On Dasar",
+    breadcrumb:"Hands-On Dasar",
     content:`<h1>Tipe Data: String & Integer</h1>
 <p>Komputer memperlakukan teks dan angka secara sangat berbeda.</p>
 <div class="split">
@@ -163,7 +163,7 @@ print(nama_depan + nama_belakang)
 print("10" + "10")`},
 
   { id:"2.5", part:2, title:"Tipe Data 2", icon:"fa-percentage",
-    breadcrumb:"19.30 | Hands-On Dasar",
+    breadcrumb:"Hands-On Dasar",
     content:`<h1>Tipe Data: Float & Boolean</h1>
 <div class="split">
 <div class="card" style="text-align:center">
@@ -185,7 +185,7 @@ print("Sedangkan sisa bagi (modulo) 10 % 3:")
 print(10 % 3)`},
 
   { id:"2.6", part:2, title:"Input & Konversi", icon:"fa-keyboard",
-    breadcrumb:"19.30 | Hands-On Dasar",
+    breadcrumb:"Hands-On Dasar",
     content:`<h1>Minta Data ke User (Input)</h1>
 <p>Kita bisa bertanya ke pengguna pakai <code>input()</code>. Tapi ada 1 aturan besi:</p>
 <div class="err-box" style="font-size:1.1rem; text-align:center">
@@ -209,7 +209,7 @@ print(tahun)`},
 
   // ===================== MODULE 3: CONDITIONALS =====================
   { id:"3.1", part:3, title:"Perbandingan", icon:"fa-balance-scale-right",
-    breadcrumb:"20.15 | Logika Alur",
+    breadcrumb:"Logika Alur",
     content:`<div style="text-align:center; padding:20px;">
     <i class="fas fa-balance-scale-right fa-5x" style="color:#e67e22; margin-bottom:20px;"></i>
     <h1>Kecerdasan Komputer Berasal dari "Perbandingan"</h1>
@@ -228,7 +228,7 @@ print("Apakah kata 'mangga' == 'Mangga'?")
 print("mangga" == "Mangga") # Perhatikan huruf besar/kecil!`},
 
   { id:"3.2", part:3, title:"Logika AND OR", icon:"fa-sitemap",
-    breadcrumb:"20.15 | Logika Alur",
+    breadcrumb:"Logika Alur",
     content:`<h1>Penggabungan Syarat (and, or)</h1>
 <div class="split">
 <div class="card" style="text-align:center">
@@ -252,7 +252,7 @@ print("Pengecekan OR:")
 print(punya_ktp or punya_sim)`},
 
   { id:"3.3", part:3, title:"Percabangan IF", icon:"fa-code-branch",
-    breadcrumb:"20.15 | Logika Alur",
+    breadcrumb:"Logika Alur",
     content:`<h1 style="text-align:center">Percabangan (IF-ELSE)</h1>
 <div style="text-align:center; padding:10px;">
     <i class="fas fa-cloud-rain fa-3x" style="color:#3498db; margin-bottom:10px;"></i>
@@ -268,7 +268,7 @@ print(punya_ktp or punya_sim)`},
 </div>`},
 
   { id:"3.4", part:3, title:"Praktek IF", icon:"fa-keyboard",
-    breadcrumb:"20.15 | Logika Alur",
+    breadcrumb:"Logika Alur",
     content:`<h1>Praktek IF-ELIF-ELSE</h1>
 <div class="err-box" style="font-size:1.1rem; margin-bottom:20px;">
     <strong>Spasi (Indentation) itu WAJIB!</strong> Baris kode di bawah <code>if</code>, <code>elif</code>, atau <code>else</code> HARUS menjorok ke dalam (Tab). Jika sejajar lurus, Python pasti Error.
@@ -293,7 +293,7 @@ else:
 
   // ===================== MODULE 4: LOOPS =====================
   { id:"4.1", part:4, title:"Kenapa Butuh Loop?", icon:"fa-tired",
-    breadcrumb:"20.15 | Logika Alur",
+    breadcrumb:"Logika Alur",
     content:`<div style="text-align:center; padding:20px;">
     <i class="fas fa-tired fa-5x" style="color:#7f8c8d; margin-bottom:20px;"></i>
     <h1>Manusia Cepat Bosan.</h1>
@@ -303,7 +303,7 @@ else:
 </div>`},
 
   { id:"4.2", part:4, title:"while Loop", icon:"fa-spinner",
-    breadcrumb:"20.15 | Logika Alur",
+    breadcrumb:"Logika Alur",
     content:`<h1 style="text-align:center">While Loop (Selama)</h1>
 <div style="text-align:center; padding:10px;">
     <i class="fas fa-hammer fa-3x" style="margin-bottom:10px;"></i>
@@ -324,7 +324,7 @@ while stok > 0:
 print("Stok Habis!")`},
 
   { id:"4.3", part:4, title:"for Loop & range", icon:"fa-list-ol",
-    breadcrumb:"20.15 | Logika Alur",
+    breadcrumb:"Logika Alur",
     content:`<h1>For Loop & Range()</h1>
 <p style="font-size:1.1rem;">Gunakan <code>for</code> jika kamu <strong>sudah tahu pasti</strong> jumlah ulangannya (misal dari daftar belanja atau urutan angka).</p>
 <div class="block-code">
@@ -337,7 +337,7 @@ print("Stok Habis!")`},
     print("Mencetak dokumen ke-", nomor)`},
 
   { id:"4.4", part:4, title:"Langkah Selanjutnya", icon:"fa-rocket",
-    breadcrumb:"20.45 | Penutupan",
+    breadcrumb:"Penutupan",
     content:`<div style="text-align:center; padding:20px;">
     <i class="fas fa-rocket fa-5x" style="color:var(--her-pink); margin-bottom:20px;"></i>
     <h1>Mempersiapkan Mindset Logika</h1>
