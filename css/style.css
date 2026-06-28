@@ -245,14 +245,15 @@ th { background: rgba(255, 105, 180, 0.05); color: var(--her-purple); font-weigh
     .quest-map { padding-top: 100px; padding-bottom: 50px; }
     .quest-line { left: 20px; top: 90px; }
     .map-dot { left: 22px; width: 26px; height: 26px; font-size: 0.75rem; }
+    .welcome-node .map-dot { transform: translate(-50%, -50%) scale(1); box-shadow: 0 0 10px rgba(255, 20, 147, 0.3); }
     
-    .card-wrapper { margin-left: 55px; width: calc(100% - 55px); }
+    .card-wrapper { margin-left: 60px; width: calc(100% - 60px); }
     .elegant-card { padding: 25px 20px; border-radius: 15px; transform: translateX(20px); }
     .elegant-card:hover { transform: none; box-shadow: var(--shadow-soft); }
     .elegant-card::after { display: none; } /* Disable sparkles on mobile */
     
-    .hero-card { padding: 10px 0 20px 0; }
-    .hero-title { font-size: 2.3rem; margin-bottom: 15px; }
+    .hero-card { padding: 10px 0 20px 10px; }
+    .hero-title { font-size: 2.1rem; margin-bottom: 15px; }
     .hero-desc { font-size: 1.05rem; }
     
     h1 { font-size: 1.5rem; }
