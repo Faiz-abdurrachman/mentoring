@@ -216,7 +216,7 @@ print(nama)`},
 <div class="err-box" style="font-size:1.1rem; text-align:center">
     Semua data yang masuk lewat <code>input()</code> <strong>selalu ditangkap sebagai String (Teks)!</strong>
 </div>
-<p style="margin-top:15px; font-size:1.1rem">Jika kamu menanyakan umur pakai `input`, hasilnya adalah "20" bukan angka 20. Ubah dulu jadi angka agar bisa dihitung!</p>
+<p style="margin-top:15px; font-size:1.1rem">Jika kamu menanyakan umur pakai <code>input()</code>, hasilnya adalah "20" bukan angka 20. Ubah dulu jadi angka agar bisa dihitung!</p>
 <ul class="checklist" style="font-size:1.1rem">
     <li><code>int(x)</code> &rarr; Mengubah teks x jadi Angka Bulat</li>
     <li><code>str(x)</code> &rarr; Mengubah angka x jadi Teks String</li>
