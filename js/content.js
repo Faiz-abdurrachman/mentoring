@@ -87,11 +87,17 @@ print("Saya siap belajar Python")`},
   { id:"2.2", part:2, title:"Variable", icon:"fa-box",
     breadcrumb:"19.30 | My First Python Code",
     content:`<h1>Variable (Kotak Penyimpanan)</h1>
-<p>Variabel seperti "kotak berlabel" yang digunakan untuk menyimpan data. Isinya bisa diubah kapan saja.</p>
-<div class="block-code"><span class="kw">nama</span> = <span class="st">"Budi"</span>
-<span class="kw">poin</span> = <span class="nu">50</span>
-<span class="fn">print</span>(<span class="kw">nama</span>)</div>
-<div class="err-box"><strong>Aturan Penamaan:</strong><br>1. Tidak boleh pakai spasi (gunakan <code>nama_lengkap</code>).<br>2. Tidak boleh diawali angka (<code>1nama</code> akan error).<br>3. Sensitif huruf besar/kecil (<code>Poin</code> beda dengan <code>poin</code>).</div>
+<p>Variabel adalah "kotak" di dalam memori komputer (RAM) yang kita beri nama (label) untuk menyimpan data.</p>
+<div class="split" style="margin-bottom:15px; align-items:center;">
+<div>
+<p style="font-size:0.95rem"><strong>Analogi:</strong> Kamu punya kotak kardus. Kamu tempel stiker bertuliskan "nama". Lalu kamu masukkan kertas bertuliskan "Budi" ke dalamnya.</p>
+</div>
+<div>
+<div class="block-code" style="margin:0"><span class="kw">nama</span> = <span class="st">"Budi"</span>
+<span class="kw">umur</span> = <span class="nu">20</span></div>
+</div>
+</div>
+<div class="err-box"><strong>PENTING:</strong> Tanda <code>=</code> di coding BUKAN berarti "sama dengan" matematika, tapi berarti "Tugaskan/Masukkan data di kanan ke dalam kotak di kiri".</div>
 `,playground:`poin = 50
 print("Poin awal:")
 print(poin)
@@ -212,14 +218,13 @@ print(lulus_ujian or lulus_wawancara)`},
   { id:"3.3", part:3, title:"if, else, elif", icon:"fa-code-branch",
     breadcrumb:"20.15 | Computer Logic",
     content:`<h1>if, if-else, if-elif-else</h1>
-<p>Di sinilah kita menyuruh program mengeksekusi blok kode yang berbeda berdasarkan hasil kondisi (True/False).</p>
-<div class="block-code"><span class="kw">nilai</span> = <span class="nu">85</span>
-<span class="kw">if</span> nilai >= <span class="nu">90</span>:
-    <span class="fn">print</span>(<span class="st">"A"</span>)
-<span class="kw">elif</span> nilai >= <span class="nu">80</span>:
-    <span class="fn">print</span>(<span class="st">"B"</span>)
+<p>Di sinilah kita mengajari program mengambil keputusan layaknya manusia.</p>
+<p style="font-size:0.95rem"><strong>Analogi:</strong> Kamu mau keluar rumah. Jika (<code>if</code>) hujan, bawa payung. Atau jika (<code>elif</code>) panas terik, bawa topi. Jika tidak keduanya (<code>else</code>), jalan kosong saja.</p>
+<div class="block-code"><span class="kw">uang</span> = <span class="nu">50000</span>
+<span class="kw">if</span> uang >= <span class="nu">20000</span>:
+    <span class="fn">print</span>(<span class="st">"Bisa beli kopi!"</span>)
 <span class="kw">else</span>:
-    <span class="fn">print</span>(<span class="st">"C"</span>)</div>
+    <span class="fn">print</span>(<span class="st">"Uang tidak cukup."</span>)</div>
 <div class="err-box"><strong>IndentationError!</strong> Baris kode di bawah <code>if</code>, <code>elif</code>, atau <code>else</code> WAJIB menjorok ke kanan (diberi Tab / 4 Spasi). Jika sejajar lurus, Python pasti Error.</div>
 `,playground:`suhu = 35
 
@@ -277,7 +282,61 @@ print("Loop selesai!")`},
         print("Enam? Berhenti Total! (break)")
         break
         
-    print("Angka saat ini:", angka)`}
+    print("Angka saat ini:", angka)`},
+
+  { id:"3.7", part:3, title:"10 Kesalahan Umum", icon:"fa-exclamation-triangle",
+    breadcrumb:"20.15 | Computer Logic",
+    content:`<h1>10 Kesalahan Umum Pemula (Red Flags)</h1>
+<ul class="checklist" style="font-size:0.95rem; margin-top:10px;">
+<li><i class="fas fa-times-circle" style="color:#ff4d4d"></i> <strong>Lupa titik dua (:)</strong> di akhir if, else, while, atau for.</li>
+<li><i class="fas fa-times-circle" style="color:#ff4d4d"></i> <strong>Salah Indentation (Spasi).</strong> Blok kode HARUS menjorok ke dalam (Tab).</li>
+<li><i class="fas fa-times-circle" style="color:#ff4d4d"></i> <strong>Menggunakan <code>=</code> untuk mengecek.</strong> Pakai <code>==</code> untuk membandingkan!</li>
+<li><i class="fas fa-times-circle" style="color:#ff4d4d"></i> <strong>Lupa tanda kutip.</strong> Teks biasa wajib dikurung kutip.</li>
+<li><i class="fas fa-times-circle" style="color:#ff4d4d"></i> <strong>Case Sensitive.</strong> <code>Nama</code> dan <code>nama</code> dianggap beda.</li>
+<li><i class="fas fa-times-circle" style="color:#ff4d4d"></i> <strong>Lupa konversi tipe data.</strong> <code>"5" + 10</code> pasti Error.</li>
+<li><i class="fas fa-times-circle" style="color:#ff4d4d"></i> <strong>Infinite Loop.</strong> Lupa mengubah nilai variabel di dalam while loop.</li>
+<li><i class="fas fa-times-circle" style="color:#ff4d4d"></i> <strong>Typo Nama Variabel/Fungsi.</strong> Misal: <code>prnt("Halo")</code>.</li>
+</ul>
+<div class="ok-box"><strong>Saran Emas:</strong> Jangan panik saat melihat teks merah (Error). Baca baris terakhirnya, komputer selalu memberi tahu letak baris yang salah!</div>
+`},
+
+  // ===================== MODULE 4: MINI PROJECT =====================
+  { id:"4.1", part:4, title:"Kasir Otomatis", icon:"fa-shopping-cart",
+    breadcrumb:"20.45 | Mini Project",
+    content:`<h1>Mini Project: Kasir Otomatis</h1>
+<p>Mari kita gabungkan SEMUA materi hari ini (Variabel, Konversi, If-Else, dan Loop) ke dalam satu program yang sangat nyata!</p>
+<div class="block-code" style="max-height: 180px; overflow-y: auto;">
+total = 0
+<span class="kw">while True</span>:
+    barang = input("Nama barang (ketik 'selesai' utk total): ")
+    <span class="kw">if</span> barang == 'selesai':
+        <span class="kw">break</span>
+    harga = int(input("Harga? "))
+    total = total + harga
+</div>
+<div class="warn-box">Di playground interaktif web ini, untuk menghentikan program di bawah, <strong>pastikan kamu mengetik "selesai"</strong> pada popup yang muncul!</div>
+`,playground:`print("=== TOKO AI ===")
+total_belanja = 0
+
+while True:
+    barang = input("Nama barang (ketik 'selesai' utk stop): ")
+    if barang == "selesai":
+        break
+        
+    harga_teks = input("Harga barang tersebut? Rp. ")
+    harga_angka = int(harga_teks)
+    total_belanja = total_belanja + harga_angka
+    print("=> " + barang + " ditambahkan.")
+
+print("------------------------------")
+print("Total Harga: Rp.", total_belanja)
+
+if total_belanja > 100000:
+    print("Selamat! Kamu dapat diskon Rp. 10.000")
+    total_belanja = total_belanja - 100000
+    print("Total Bayar Akhir: Rp.", total_belanja)
+else:
+    print("Beli lebih banyak lagi untuk dapat diskon!")`}
 
 ];
 
