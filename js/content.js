@@ -26,18 +26,8 @@ const COURSE = [
 </div>
 <p class="text-muted" style="margin-top:20px; font-size:1.05rem;">Selain sangat laku di industri (Gaji rata-rata $116K di US), Python adalah <strong>bahasa paling ramah untuk pemula</strong> yang belum pernah ngoding sama sekali.</p>`},
 
-  { id:"1.3", part:1, title:"Compiler vs Interpreter", icon:"fa-language",
-    breadcrumb:"19.00 | Pengenalan & Setup",
-    content:`<h1>Compiler vs Interpreter</h1>
-<p>Bagaimana cara komputer mengerti dan menjalankan kode Python kita?</p>
-<table class="comparison-table">
-<tr><th>Aspek</th><th>Compiler (C++, Java)</th><th class="hl">Interpreter (Python)</th></tr>
-<tr><td><strong>Analogi</strong></td><td>Menerjemahkan 1 buku penuh, lalu dicetak.</td><td class="hl">Penerjemah di sidang PBB (langsung ngomong).</td></tr>
-<tr><td><strong>Cara Kerja</strong></td><td>Diubah semua jadi file (.exe) baru jalan.</td><td class="hl">Dibaca dan dieksekusi <strong>baris per baris</strong>.</td></tr>
-</table>
-<p class="text-muted">Kelebihan Interpreter: Jika kalian menulis 10 baris dan baris ke-5 error, baris 1-4 tetap akan jalan terlebih dahulu.</p>`},
 
-  { id:"1.4", part:1, title:"Instalasi & Setup Local", icon:"fa-download",
+  { id:"1.3", part:1, title:"Instalasi & Setup Local", icon:"fa-download",
     breadcrumb:"19.00 | Pengenalan & Setup",
     content:`<h1>Instalasi Local Environment</h1>
 <p>Nah, setelah tahu betapa kerennya Python, sekarang saatnya kita menyiapkan "bengkel" kerja di laptop kalian.</p>
@@ -53,7 +43,7 @@ const COURSE = [
 </div>
 </div>`},
 
-  { id:"1.5", part:1, title:"Terminal & Virtual Env", icon:"fa-terminal",
+  { id:"1.4", part:1, title:"Terminal & Virtual Env", icon:"fa-terminal",
     breadcrumb:"19.00 | Pengenalan & Setup",
     content:`<h1>Terminal & Virtual Environment</h1>
 <p>Terminal (CMD/PowerShell) adalah tempat kita mengetik perintah langsung ke sistem komputer.</p>
@@ -68,7 +58,7 @@ python -m venv env<br><br>
 </div>
 <div class="warn-box">Ciri venv aktif: Ada tulisan <strong>(env)</strong> di terminal kalian.</div>`},
 
-  { id:"1.6", part:1, title:"Google Colab & T4 GPU", icon:"fa-cloud",
+  { id:"1.5", part:1, title:"Google Colab & T4 GPU", icon:"fa-cloud",
     breadcrumb:"19.00 | Pengenalan & Setup",
     content:`<h1>Alternatif: Google Colab</h1>
 <p>Jika laptop bermasalah saat instalasi tadi, jangan panik! Kita bisa pakai "laptop cloud" gratis milik Google: <strong>Google Colab</strong>.</p>
