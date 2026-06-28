@@ -412,6 +412,71 @@ print("Baterai Penuh 100%!")`},
     <p style="font-size:1.2rem; margin-top:20px;">Minggu depan, kita akan menggunakan <strong>Logika dan Perulangan ini</strong> untuk membedah ribuan baris data sungguhan di industri.</p>
 </div>`},
 
+  // ===================== MODULE 5: STUDI KASUS (PILIHAN) =====================
+  { id:"5.1", part:5, title:"Kasus 1: Biodata", icon:"fa-id-card",
+    breadcrumb:"Studi Kasus",
+    content:`<div style="text-align:center; padding:10px;">
+    <i class="fas fa-edit fa-4x" style="color:#f39c12; margin-bottom:15px;"></i>
+    <h1>Studi Kasus 1: Biodata Otomatis</h1>
+    <p style="font-size:1.1rem;">Bantu Her AI melengkapi program pengisi biodata ini. Ada beberapa kode yang bolong (diisi dengan <code>___</code>). Ganti dengan kode yang benar agar programnya bisa jalan!</p>
+</div>
+<ul class="checklist" style="font-size:1.1rem; margin-top:20px;">
+    <li>Ganti <code>___</code> dengan perintah <code>input</code> atau variabel yang tepat.</li>
+    <li>Jalankan kodenya dan coba ketik namamu!</li>
+</ul>`,
+    playground:`# LENGKAPI KODE DI BAWAH INI:
+
+print("=== SISTEM BIODATA ===")
+nama = ___( "Siapa namamu? " )
+umur_teks = ___( "Berapa umurmu? " )
+
+# Ubah umur menjadi angka bulat (Integer)
+umur_angka = ___(umur_teks)
+
+print("Halo,", ___)
+print("Tahun depan umurmu adalah", umur_angka + 1)`},
+
+  { id:"5.2", part:5, title:"Kasus 2: Diskon", icon:"fa-tags",
+    breadcrumb:"Studi Kasus",
+    content:`<div style="text-align:center; padding:10px;">
+    <i class="fas fa-shopping-bag fa-4x" style="color:#e74c3c; margin-bottom:15px;"></i>
+    <h1>Studi Kasus 2: Kasir Pintar</h1>
+    <p style="font-size:1.1rem;">Toko sedang mengadakan promo! Jika total belanja pelanggan lebih dari Rp 100.000, maka dia mendapat Diskon. Lengkapi kode logika IF-ELSE di bawah ini.</p>
+</div>
+<ul class="checklist" style="font-size:1.1rem; margin-top:20px;">
+    <li>Ganti <code>___</code> dengan operator perbandingan yang tepat (contoh: <code>></code>).</li>
+    <li>Pastikan logika percabangannya berjalan sempurna.</li>
+</ul>`,
+    playground:`# LENGKAPI KODE DI BAWAH INI:
+
+total_belanja = 120000
+
+# Jika belanja LEBIH BESAR dari 100000
+if total_belanja ___ 100000:
+    print("Selamat! Anda dapat diskon 20%")
+___:
+    print("Maaf, belanjaan Anda belum mencapai target diskon.")`},
+
+  { id:"5.3", part:5, title:"Kasus 3: Alarm", icon:"fa-clock",
+    breadcrumb:"Studi Kasus",
+    content:`<div style="text-align:center; padding:10px;">
+    <i class="fas fa-bell fa-4x" style="color:#2980b9; margin-bottom:15px;"></i>
+    <h1>Studi Kasus 3: Alarm Berisik</h1>
+    <p style="font-size:1.1rem;">Kamu membuat program alarm yang akan berbunyi sebanyak 5 kali menggunakan <code>for loop</code>. Lengkapi kode di bawah ini agar alarmnya berfungsi!</p>
+</div>
+<ul class="checklist" style="font-size:1.1rem; margin-top:20px;">
+    <li>Ganti <code>___</code> dengan fungsi pengukur jumlah urutan (range).</li>
+</ul>`,
+    playground:`# LENGKAPI KODE DI BAWAH INI:
+
+print("Waktunya Bangun!")
+
+# Buat alarm berbunyi sebanyak 5 kali (dari 1 sampai 5)
+for bunyi in ___(1, 6):
+    print("Kringgg!!! Bunyi ke-", ___)
+    
+print("Alarm dimatikan.")`},
+
 ];
 
 if(typeof module!=='undefined') module.exports=COURSE;
