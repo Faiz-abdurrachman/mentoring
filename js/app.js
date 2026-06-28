@@ -163,6 +163,7 @@ function runSkulptCode(slideIndex) {
     }).then(
         function() { 
             if (outputDiv.innerHTML === '') outputDiv.innerHTML = '> (Proses selesai tanpa output)'; 
+            if (typeof confetti === 'function') confetti({ particleCount: 50, spread: 60, origin: { y: 0.8 }, colors: ['#FF1493', '#8A2BE2', '#FF69B4'] });
         },
         function(err) {
             outputDiv.style.color = '#F56565'; // Error red
