@@ -18,14 +18,12 @@ const COURSE = [
     content:`<h1 style="text-align:center">Kenapa Python?</h1>
 <div class="split" style="margin-top:30px;">
 <div style="text-align:center; border: 2px solid #ff4d4d; padding:15px; border-radius:10px; background:#fff0f0">
-    <h3 style="color:#ff4d4d">Bahasa Kuno (Java/C++)</h3>
-    <i class="fas fa-frown fa-4x" style="color:#ff4d4d; margin:10px 0;"></i>
-    <p>Sangat ketat. Wajib pakai titik koma (<code>;</code>) dan <code>{}</code>. Lupa 1 simbol? <strong>ERROR!</strong></p>
+    <h3 style="color:#ff4d4d; margin-bottom:15px">Java / C++</h3>
+    <p>Aturannya kaku, banyak titik-koma (;), dan bertele-tele.</p>
 </div>
-<div style="text-align:center; border: 2px solid #00C851; padding:15px; border-radius:10px; background:#f0fff0">
-    <h3 style="color:#00C851">Python</h3>
-    <i class="fas fa-smile-beam fa-4x" style="color:#00C851; margin:10px 0;"></i>
-    <p>Sangat Beginner-Friendly. Baca layaknya bahasa Inggris. Rapi hanya dengan spasi!</p>
+<div style="text-align:center; border: 2px solid #2ecc71; padding:15px; border-radius:10px; background:#f0fff4">
+    <h3 style="color:#2ecc71; margin-bottom:15px">Python</h3>
+    <p>Simpel, mirip bahasa Inggris, tanpa titik-koma. Sangat ramah pemula!</p>
 </div>
 </div>`},
 
@@ -34,13 +32,9 @@ const COURSE = [
     content:`<h1>Buktikan Sendiri Kecepatannya!</h1>
 <div style="margin-top:20px;">
 <p style="font-weight:bold; color:#ff4d4d"><i class="fas fa-times-circle"></i> Java (Mencetak teks):</p>
-<div class="block-code" style="font-size:0.9rem; margin-bottom:20px; opacity:0.7">class Main {
-  public static void main(String[] args) {
-    System.out.println("Hello World");
-  }
-}</div>
-<p style="font-weight:bold; color:#00C851; font-size:1.2rem;"><i class="fas fa-check-circle"></i> Python (Sama persis):</p>
-<div class="block-code" style="font-size:1.2rem; border-left: 5px solid #00C851;"><span class="fn">print</span>(<span class="st">"Hello World"</span>)</div>
+<div class="block-code" style="font-size:0.9rem">public class Main {<br>&nbsp;&nbsp;public static void main(String[] args) {<br>&nbsp;&nbsp;&nbsp;&nbsp;System.out.println("Halo");<br>&nbsp;&nbsp;}<br>}</div>
+<p style="font-weight:bold; color:#2ecc71; margin-top:20px;"><i class="fas fa-check-circle"></i> Python:</p>
+<div class="block-code" style="font-size:1.1rem">print("Halo")</div>
 </div>`},
 
   { id:"1.4", part:1, title:"Setup 1: Python", icon:"fa-download",
@@ -48,11 +42,10 @@ const COURSE = [
     content:`<div style="text-align:center;">
     <i class="fab fa-python fa-5x" style="color:#3776AB; margin-bottom:20px;"></i>
     <h1>Install Mesin Python</h1>
-    <p style="font-size:1.2rem;">Komputermu butuh "Penerjemah" agar mengerti kodemu.</p>
-    
-    <div style="background:#FFF0F0; border:2px dashed #ff4d4d; padding:20px; border-radius:15px; margin-top:30px; display:inline-block; text-align:left;">
-        <h3 style="color:#ff4d4d; margin:0 0 10px 0;"><i class="fas fa-exclamation-triangle"></i> SANGAT KRUSIAL!</h3>
-        <p style="margin:0; font-size:1.1rem">Saat install, kamu <strong>WAJIB</strong> mencentang kotak:<br><br><span style="background:white; padding:5px; border:1px solid black; font-weight:bold;">[✓] Add Python to PATH</span></p>
+    <p style="font-size:1.2rem;">Sama seperti butuh bensin untuk menjalankan mobil, laptopmu butuh "Mesin Python" untuk menjalankan kode.</p>
+    <br>
+    <div class="ok-box">
+        Silakan download dari <strong>python.org</strong> dan pastikan centang <em>"Add Python to PATH"</em> saat install!
     </div>
 </div>`},
 
@@ -63,13 +56,8 @@ const COURSE = [
     <h1>Install VS Code</h1>
     <p style="font-size:1.2rem;">Ini adalah "Buku Catatan" pintarmu. Mewarnai kode & mengecek salah ketik.</p>
     <br>
-    <div class="card" style="display:inline-block; text-align:left; width:80%;">
-        <h3>Langkah:</h3>
-        <ol style="font-size:1.1rem">
-            <li>Buka VS Code</li>
-            <li>Buka tab Extensions (Kotak-kotak di kiri)</li>
-            <li>Cari & Install ekstensi bernama <strong>"Python"</strong></li>
-        </ol>
+    <div class="ok-box">
+        <strong>PENTING:</strong> Setelah install VS Code, buka menu <em>Extensions</em> dan cari <strong>Python</strong> lalu klik install.
     </div>
 </div>`},
 
@@ -80,14 +68,10 @@ const COURSE = [
     <h1>Google Colab</h1>
     <p style="font-size:1.2rem;">Laptop error? Jangan panik. Buka <strong>colab.research.google.com</strong>.</p>
     <br>
-    <div class="ok-box" style="display:inline-block; text-align:left;">
-        Itu adalah "Laptop Cloud" milik Google.<br>
-        Kamu bisa langsung ngoding di browser tanpa perlu install apa-apa!<br><br>
-        <strong>Malam ini, ayo gunakan Playground interaktif di web ini!</strong>
+    <div class="ok-box">
+        Ini adalah VS Code + Mesin Python versi "Online" dari Google. Kalian bisa ngoding langsung dari browser tanpa install apapun!
     </div>
-</div>`,playground:`print("Setup Environment Selesai!")
-print("Siap belajar Python!")`},
-
+</div>`},
 
   // ===================== MODULE 2: VARIABEL & DATA =====================
   { id:"2.1", part:2, title:"Menampilkan Teks", icon:"fa-print",
@@ -95,25 +79,26 @@ print("Siap belajar Python!")`},
     content:`<h1>Mencetak Teks: print()</h1>
 <p style="font-size:1.1rem">Ini adalah perintah ajaib agar komputer berbicara ke layar.</p>
 <div class="block-code" style="font-size:1.2rem"><span class="fn">print</span>(<span class="st">"Halo Dunia"</span>)</div>
-<div class="split" style="margin-top:20px;">
-    <div style="text-align:center"><i class="fas fa-comment-dots fa-3x" style="color:var(--her-pink)"></i><p>Teks harus diapit kutip <code>"..."</code> agar tidak dianggap sebagai perintah lain!</p></div>
-    <div style="text-align:center"><i class="fas fa-hashtag fa-3x" style="color:gray"></i><p>Gunakan awalan <code>#</code> untuk menulis komentar yang akan diabaikan komputer.</p></div>
-</div>
-`,playground:`# Coba ubah teks di bawah ini!
-print("Hello World")
+<ul class="checklist" style="font-size:1.1rem">
+    <li><code>print</code> harus huruf kecil semua.</li>
+    <li>Wajib pakai kurung buka dan tutup <code>()</code></li>
+    <li>Untuk teks, WAJIB diapit tanda kutip <code>""</code> atau <code>''</code></li>
+</ul>
+`,playground:`# Coba jalankan kode ini!
+print("Halo Dunia")
 print("Halo dari Indonesia")`},
 
-  { id:"2.2", part:2, title:"Konsep Variabel", icon:"fa-box-open",
+  { id:"2.2", part:2, title:"Apa Itu Variabel?", icon:"fa-box-open",
     breadcrumb:"Hands-On Dasar",
-    content:`<h1 style="text-align:center">Variabel = Kotak Penyimpanan</h1>
+    content:`<h1 style="text-align:center">Variabel = Kardus Penyimpanan</h1>
 <div style="text-align:center; padding:20px;">
     <i class="fas fa-box-open fa-5x" style="color:#d4a373; margin-bottom:10px;"></i>
-    <p style="font-size:1.2rem;">Bayangkan kamu punya kardus kosong.</p>
-    <p style="font-size:1.2rem;">Kamu tempel stiker bertuliskan <strong>"nama"</strong> di luar kardus itu.</p>
-    <p style="font-size:1.2rem;">Lalu kamu masukkan kertas bertuliskan <strong>"Budi"</strong> ke dalamnya.</p>
+    <p style="font-size:1.2rem;">Bayangkan variabel itu seperti kardus kosong.</p>
+    <p style="font-size:1.2rem;">Kamu bisa menempelkan "Label Nama" di kardus itu, dan memasukkan barang (Data) ke dalamnya untuk dipakai nanti.</p>
 </div>
-<div class="block-code" style="text-align:center; font-size:1.2rem;">
-<span class="kw">nama</span> = <span class="st">"Budi"</span>
+<div class="block-code" style="font-size:1.1rem">
+nama = "Her AI"<br>
+umur = 20
 </div>
 `},
 
@@ -123,162 +108,229 @@ print("Halo dari Indonesia")`},
 <div class="err-box" style="font-size:1.1rem">
     Di Python, tanda <code>=</code> <strong>BUKAN</strong> berarti kesamaan matematika!
 </div>
-<p style="font-size:1.2rem; text-align:center; margin-top:20px;">
-    Tanda <code>=</code> artinya: <br><strong>"Tugaskan / Masukkan data di kanan ke dalam kotak di kiri"</strong>
-</p>
-<div class="block-code" style="margin-top:20px;">
-<span class="kw">skor</span> = <span class="nu">100</span><br>
-<span class="fn">print</span>(skor)
+<p style="font-size:1.1rem">Tanda <code>=</code> artinya <strong>"SIMPAN"</strong> atau <strong>"MASUKKAN"</strong> (dari Kanan ke Kiri).</p>
+<div class="block-code">
+nyawa = 3
 </div>
-`,playground:`nama_jagoan = "Gatotkaca"
-nyawa = 100
-
-print("Pahlawan kita:")
-print(nama_jagoan)
-print("Sisa Nyawa:")
+<p>Komputer membaca: <i>"Ambil angka 3 (Kanan), lalu MASUKKAN ke dalam kardus bernama 'nyawa' (Kiri)."</i></p>
+`,playground:`nyawa = 3
+print("Jumlah nyawa awal:")
 print(nyawa)`},
 
-  { id:"2.4", part:2, title:"Tipe Data 1", icon:"fa-font",
+  { id:"2.4", part:2, title:"Aturan Penamaan", icon:"fa-spell-check",
     breadcrumb:"Hands-On Dasar",
-    content:`<h1>Tipe Data: String & Integer</h1>
-<p>Komputer memperlakukan teks dan angka secara sangat berbeda.</p>
+    content:`<h1>Aturan Memberi Nama Variabel</h1>
+<p style="font-size:1.1rem">Python sedikit cerewet soal nama kardus (variabel). Ingat 3 aturan ini:</p>
+<table class="comparison-table" style="font-size:1.1rem">
+<tr><td style="color:#2ecc71"><i class="fas fa-check"></i> Boleh</td><td><code>nama_lengkap</code>, <code>umur1</code>, <code>_rahasia</code></td></tr>
+<tr><td style="color:#e74c3c"><i class="fas fa-times"></i> DILARANG Pakai Spasi</td><td><code>nama lengkap</code> &rarr; Error!</td></tr>
+<tr><td style="color:#e74c3c"><i class="fas fa-times"></i> DILARANG Diawali Angka</td><td><code>1nama</code> &rarr; Error!</td></tr>
+</table>
+<div class="ok-box">
+    <strong>Tips:</strong> Gunakan garis bawah (<code>_</code>) sebagai pengganti spasi (disebut <em>Snake Case</em>).
+</div>`},
+
+  { id:"2.5", part:2, title:"Menimpa Variabel", icon:"fa-exchange-alt",
+    breadcrumb:"Hands-On Dasar",
+    content:`<h1>Nilai Variabel Bisa Berubah!</h1>
+<p style="font-size:1.1rem">Sesuai namanya, "Variabel" berarti bisa bervariasi (berubah). Kalau kamu memasukkan barang baru ke kardus yang sama, barang lama akan <strong>dibuang/ditimpa</strong>.</p>
+<div class="block-code">
+skor = 10<br>
+skor = 50 <span class="cm"># Angka 10 dihapus, diganti 50</span>
+</div>
+`,playground:`skor = 10
+print("Skor awal:")
+print(skor)
+
+skor = 50
+print("Skor sekarang:")
+print(skor)`},
+
+  { id:"2.6", part:2, title:"Tipe Data String", icon:"fa-font",
+    breadcrumb:"Hands-On Dasar",
+    content:`<h1>Tipe Data: String (Teks)</h1>
+<p style="font-size:1.1rem">String adalah kumpulan huruf, angka, atau simbol yang diapit oleh tanda kutip (<code>""</code> atau <code>''</code>).</p>
+<div class="block-code">
+nama = "Her AI"<br>
+nomor_hp = "0812345678" <span class="cm"># Ini String, bukan angka matematika!</span>
+</div>
+<div class="warn-box">
+    <strong>Ingat:</strong> Angka di dalam kutip adalah teks. "10" + "10" hasilnya "1010", BUKAN 20!
+</div>
+`,playground:`teks_1 = "10"
+teks_2 = "10"
+
+print("Hasil penambahan teks:")
+print(teks_1 + teks_2)`},
+
+  { id:"2.7", part:2, title:"Tipe Data Integer", icon:"fa-calculator",
+    breadcrumb:"Hands-On Dasar",
+    content:`<h1>Tipe Data: Integer (Angka Bulat)</h1>
+<p style="font-size:1.1rem">Integer adalah angka utuh <strong>tanpa tanda kutip</strong>. Hanya Integer dan Float yang bisa dihitung pakai Matematika.</p>
+<table class="comparison-table" style="font-size:1.1rem">
+<tr><td><code>+</code></td><td>Tambah</td></tr>
+<tr><td><code>-</code></td><td>Kurang</td></tr>
+<tr><td><code>*</code></td><td>Kali</td></tr>
+<tr><td><code>/</code></td><td>Bagi (Hasilnya akan jadi desimal)</td></tr>
+</table>
+`,playground:`angka_1 = 10
+angka_2 = 10
+
+print("Hasil penambahan matematika:")
+print(angka_1 + angka_2)
+print("Hasil kali matematika:")
+print(angka_1 * angka_2)`},
+
+  { id:"2.8", part:2, title:"Tipe Data Float & Bool", icon:"fa-percentage",
+    breadcrumb:"Hands-On Dasar",
+    content:`<h1>Float & Boolean</h1>
 <div class="split">
 <div class="card" style="text-align:center">
-    <i class="fas fa-font fa-3x" style="color:blue"></i>
-    <h3 style="margin-top:10px">String (Teks)</h3>
-    <p>Wajib pakai kutip!<br>Contoh: <code>"Budi"</code>, <code>"100"</code></p>
+    <h3 style="color:#9b59b6">Float (Desimal)</h3>
+    <i class="fas fa-circle-notch fa-3x" style="color:#9b59b6; margin:10px 0;"></i>
+    <p>Angka pecahan. Wajib pakai TITIK, bukan koma. <br><code>berat = 65.5</code></p>
 </div>
 <div class="card" style="text-align:center">
-    <i class="fas fa-sort-numeric-up fa-3x" style="color:green"></i>
-    <h3 style="margin-top:10px">Integer (Bulat)</h3>
-    <p>Angka utuh tanpa kutip.<br>Contoh: <code>100</code>, <code>-5</code></p>
+    <h3 style="color:#e67e22">Boolean (Saklar)</h3>
+    <i class="fas fa-toggle-on fa-3x" style="color:#e67e22; margin:10px 0;"></i>
+    <p>Hanya 2 jawaban: <code>True</code> atau <code>False</code> (Wajib Huruf Besar). <br><code>lulus = True</code></p>
 </div>
-</div>
-`,playground:`# String bisa ditempel pakai tanda +
-nama_depan = "Budi "
-nama_belakang = "Santoso"
-print(nama_depan + nama_belakang)
+</div>`},
 
-# TAPI AWAS! "10" + "10" tidak akan jadi 20!
-print("10" + "10")`},
-
-  { id:"2.5", part:2, title:"Tipe Data 2", icon:"fa-percentage",
+  { id:"2.9", part:2, title:"Input Data User", icon:"fa-keyboard",
     breadcrumb:"Hands-On Dasar",
-    content:`<h1>Tipe Data: Float & Boolean</h1>
-<div class="split">
-<div class="card" style="text-align:center">
-    <i class="fas fa-percentage fa-3x" style="color:orange"></i>
-    <h3 style="margin-top:10px">Float (Desimal)</h3>
-    <p>Angka desimal. Wajib pakai titik (bukan koma).<br>Contoh: <code>3.14</code>, <code>0.5</code></p>
+    content:`<h1>Meminta Data ke User (Input)</h1>
+<p style="font-size:1.1rem">Komputer butuh interaksi. Gunakan <code>input()</code> untuk memunculkan kolom isian, lalu simpan jawabannya ke dalam variabel.</p>
+<div class="block-code">
+nama = input("Siapa nama kamu? ")<br>
+print("Halo", nama)
 </div>
-<div class="card" style="text-align:center">
-    <i class="fas fa-toggle-on fa-3x" style="color:purple"></i>
-    <h3 style="margin-top:10px">Boolean (Logika)</h3>
-    <p>Hanya punya 2 nilai:<br><code>True</code> atau <code>False</code></p>
-</div>
-</div>
-`,playground:`# Matematika dengan Integer dan Float
-print("10 dibagi 3 adalah:")
-print(10 / 3)   # Menghasilkan Float
+`,playground:`# Jalankan ini! Akan muncul pop-up minta nama.
+nama = input("Siapa nama kamu? ")
+print("Selamat datang,")
+print(nama)`},
 
-print("Sedangkan sisa bagi (modulo) 10 % 3:")
-print(10 % 3)`},
-
-  { id:"2.6", part:2, title:"Input & Konversi", icon:"fa-keyboard",
+  { id:"2.10", part:2, title:"Konversi Tipe Data", icon:"fa-magic",
     breadcrumb:"Hands-On Dasar",
-    content:`<h1>Minta Data ke User (Input)</h1>
-<p>Kita bisa bertanya ke pengguna pakai <code>input()</code>. Tapi ada 1 aturan besi:</p>
+    content:`<h1>Casting (Konversi Data)</h1>
 <div class="err-box" style="font-size:1.1rem; text-align:center">
-    Semua data yang masuk lewat <code>input()</code> akan <strong>selalu dianggap sebagai String (Teks)!</strong>
+    Semua data yang masuk lewat <code>input()</code> <strong>selalu ditangkap sebagai String (Teks)!</strong>
 </div>
-<p style="margin-top:15px">Jika ingin menghitung input tersebut, wajib di-konversi dulu (Type Casting):</p>
-<ul class="checklist">
-    <li><code>int(x)</code> &rarr; Ubah teks x jadi Angka Bulat</li>
-    <li><code>float(x)</code> &rarr; Ubah teks x jadi Angka Desimal</li>
+<p style="margin-top:15px; font-size:1.1rem">Jika kamu menanyakan umur pakai `input`, hasilnya adalah "20" bukan angka 20. Ubah dulu jadi angka agar bisa dihitung!</p>
+<ul class="checklist" style="font-size:1.1rem">
+    <li><code>int(x)</code> &rarr; Mengubah teks x jadi Angka Bulat</li>
+    <li><code>str(x)</code> &rarr; Mengubah angka x jadi Teks String</li>
 </ul>
-`,playground:`# Coba jalankan! Akan muncul pop-up minta input.
-umur_teks = input("Berapa umur kamu?")
+`,playground:`umur_teks = input("Berapa umur kamu? ")
 
-# Konversi (Casting) ke angka
+# Konversi String ke Integer
 umur_angka = int(umur_teks)
 
-tahun = 2026 - umur_angka
+tahun_lahir = 2026 - umur_angka
 print("Tahun lahir kamu sekitar:")
-print(tahun)`},
+print(tahun_lahir)`},
 
 
   // ===================== MODULE 3: CONDITIONALS =====================
-  { id:"3.1", part:3, title:"Perbandingan", icon:"fa-balance-scale-right",
+  { id:"3.1", part:3, title:"Perbandingan Dasar", icon:"fa-balance-scale-right",
     breadcrumb:"Logika Alur",
     content:`<div style="text-align:center; padding:20px;">
     <i class="fas fa-balance-scale-right fa-5x" style="color:#e67e22; margin-bottom:20px;"></i>
-    <h1>Kecerdasan Komputer Berasal dari "Perbandingan"</h1>
-    <p style="font-size:1.2rem;">Komputer selalu mengevaluasi perbandingan untuk menghasilkan Boolean (<code>True</code>/<code>False</code>).</p>
+    <h1>Kecerdasan dari "Perbandingan"</h1>
+    <p style="font-size:1.2rem;">Komputer selalu mengevaluasi perbandingan matematika untuk menghasilkan Boolean (<code>True</code> atau <code>False</code>).</p>
 </div>
 <table class="comparison-table" style="font-size:1.1rem">
-<tr><td><code>==</code></td><td>Sama Persis (Beda dari <code>=</code>)</td></tr>
-<tr><td><code>!=</code></td><td>Tidak Sama</td></tr>
+<tr><td><code>==</code></td><td>Sama Persis (Berbeda dari <code>=</code>)</td></tr>
+<tr><td><code>!=</code></td><td>Tidak Sama Persis</td></tr>
 <tr><td><code>&gt;</code></td><td>Lebih Besar</td></tr>
 <tr><td><code>&lt;=</code></td><td>Lebih Kecil Sama Dengan</td></tr>
 </table>
-`,playground:`print("Apakah 100 > 50?")
+`,playground:`print("Apakah 100 lebih besar dari 50?")
 print(100 > 50)
 
 print("Apakah kata 'mangga' == 'Mangga'?")
 print("mangga" == "Mangga") # Perhatikan huruf besar/kecil!`},
 
-  { id:"3.2", part:3, title:"Logika AND OR", icon:"fa-sitemap",
+  { id:"3.2", part:3, title:"Logika AND & OR", icon:"fa-sitemap",
     breadcrumb:"Logika Alur",
-    content:`<h1>Penggabungan Syarat (and, or)</h1>
+    content:`<h1>Penggabungan Banyak Syarat</h1>
 <div class="split">
 <div class="card" style="text-align:center">
     <h3 style="color:#c0392b">AND</h3>
     <i class="fas fa-lock fa-3x" style="color:#c0392b; margin:10px 0;"></i>
-    <p>Dua-duanya <strong>Wajib</strong> True.<br>(Punya KTP <i>AND</i> Umur > 17)</p>
+    <p>Dua-duanya <strong>Wajib</strong> True.<br>(Punya KTP <i>AND</i> Punya SIM)</p>
 </div>
 <div class="card" style="text-align:center">
     <h3 style="color:#2980b9">OR</h3>
     <i class="fas fa-unlock fa-3x" style="color:#2980b9; margin:10px 0;"></i>
-    <p><strong>Salah Satu</strong> True Sudah Cukup.<br>(Bawa KTP <i>OR</i> Bawa SIM)</p>
+    <p><strong>Salah Satu</strong> True Sudah Cukup.<br>(Bawa Payung <i>OR</i> Bawa Jas Hujan)</p>
 </div>
 </div>
 `,playground:`punya_ktp = True
 punya_sim = False
 
-print("Pengecekan AND:")
+print("Pengecekan AND (Wajib Dua-duanya):")
 print(punya_ktp and punya_sim)
 
-print("Pengecekan OR:")
+print("Pengecekan OR (Salah Satu Boleh):")
 print(punya_ktp or punya_sim)`},
 
-  { id:"3.3", part:3, title:"Percabangan IF", icon:"fa-code-branch",
+  { id:"3.3", part:3, title:"Konsep Percabangan", icon:"fa-code-branch",
     breadcrumb:"Logika Alur",
-    content:`<h1 style="text-align:center">Percabangan (IF-ELSE)</h1>
+    content:`<h1 style="text-align:center">Percabangan (IF Statement)</h1>
 <div style="text-align:center; padding:10px;">
-    <i class="fas fa-cloud-rain fa-3x" style="color:#3498db; margin-bottom:10px;"></i>
-    <p style="font-size:1.2rem;">Kamu mau keluar rumah.</p>
-    <p style="font-size:1.2rem;"><strong>JIKA (if)</strong> hujan, bawa payung.</p>
-    <p style="font-size:1.2rem;"><strong>SELAIN ITU (else)</strong>, jalan kosong saja.</p>
+    <i class="fas fa-user-shield fa-3x" style="color:#3498db; margin-bottom:10px;"></i>
+    <p style="font-size:1.2rem;">Bayangkan <code>if</code> itu seperti <strong>Satpam Penjaga Pintu</strong>.</p>
+    <p style="font-size:1.2rem;">Satpam akan mengecek syarat di tangannya. Jika syarat terpenuhi (True), kamu boleh masuk ke dalam blok kode di bawahnya.</p>
 </div>
 <div class="block-code" style="margin-top:10px;">
 <span class="kw">if</span> cuaca == <span class="st">"Hujan"</span>:
     <span class="fn">print</span>(<span class="st">"Bawa Payung!"</span>)
-<span class="kw">else</span>:
-    <span class="fn">print</span>(<span class="st">"Jalan santai."</span>)
 </div>`},
 
-  { id:"3.4", part:3, title:"Praktek IF", icon:"fa-keyboard",
+  { id:"3.4", part:3, title:"Praktek Dasar IF", icon:"fa-indent",
     breadcrumb:"Logika Alur",
-    content:`<h1>Praktek IF-ELIF-ELSE</h1>
+    content:`<h1>Hati-hati dengan Spasi (Indentasi)!</h1>
 <div class="err-box" style="font-size:1.1rem; margin-bottom:20px;">
-    <strong>Spasi (Indentation) itu WAJIB!</strong> Baris kode di bawah <code>if</code>, <code>elif</code>, atau <code>else</code> HARUS menjorok ke dalam (Tab). Jika sejajar lurus, Python pasti Error.
+    <strong>Spasi (Indentation) itu WAJIB di Python!</strong> Baris kode setelah titik dua (<code>:</code>) pada perintah <code>if</code> HARUS menjorok ke dalam (di-Tab/Spasi 4x).
 </div>
-<div class="block-code" style="font-size:0.9rem">
-<span class="kw">uang</span> = <span class="nu">50000</span><br>
-<span class="kw">if</span> uang >= <span class="nu">20000</span>:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="fn">print</span>(<span class="st">"Beli Kopi!"</span>) <span class="cm"># Benar (True)</span><br>
+<p style="font-size:1.1rem">Jika baris kedua disejajarkan dengan kata <code>if</code>, komputer tidak akan tahu bahwa baris itu adalah "milik" si Satpam IF.</p>
+`,playground:`# Coba hilangkan spasinya dan lihat apa yang terjadi (Error!)
+uang = 50000
+
+if uang >= 20000:
+    print("Uang cukup! Beli Kopi.")
+    print("Transaksi berhasil.")`},
+
+  { id:"3.5", part:3, title:"IF-ELSE (Dua Jalur)", icon:"fa-random",
+    breadcrumb:"Logika Alur",
+    content:`<h1>IF-ELSE (Jika Tidak)</h1>
+<p style="font-size:1.1rem">Bagaimana kalau syaratnya gagal (False)? Kita gunakan <code>else</code> sebagai Rencana B.</p>
+<div class="block-code" style="font-size:0.95rem">
+<span class="kw">if</span> cuaca == <span class="st">"Hujan"</span>:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="fn">print</span>(<span class="st">"Bawa Payung!"</span>) <span class="cm"># Rencana A</span><br>
 <span class="kw">else</span>:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="fn">print</span>(<span class="st">"Uang Kurang."</span>) <span class="cm"># Diabaikan</span>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="fn">print</span>(<span class="st">"Jalan santai."</span>) <span class="cm"># Rencana B</span>
+</div>
+<div class="warn-box" style="font-size:1.05rem">Perintah <code>else</code> <strong>TIDAK</strong> membutuhkan syarat perbandingan. Ia otomatis menampung semua kemungkinan yang gagal dari <code>if</code>.</div>
+`,playground:`uang = 15000
+
+if uang >= 20000:
+    print("Beli Kopi!") 
+else:
+    print("Uang kurang, beli es teh saja.") `},
+
+  { id:"3.6", part:3, title:"IF-ELIF-ELSE", icon:"fa-road",
+    breadcrumb:"Logika Alur",
+    content:`<h1>Banyak Kemungkinan (ELIF)</h1>
+<p style="font-size:1.1rem">Jika ada 3 jalur atau lebih, gunakan <code>elif</code> (Else-If / Atau-Jika). Python akan mengecek dari atas ke bawah secara berurutan.</p>
+<div class="block-code" style="font-size:0.9rem">
+<span class="kw">if</span> suhu > <span class="nu">32</span>:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="fn">print</span>(<span class="st">"Cuaca panas! Nyalakan AC."</span>)<br>
+<span class="kw">elif</span> suhu > <span class="nu">25</span>:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="fn">print</span>(<span class="st">"Cuaca hangat."</span>)<br>
+<span class="kw">else</span>:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="fn">print</span>(<span class="st">"Cuaca dingin, ambil jaket."</span>)
 </div>
 `,playground:`suhu = 35
 
@@ -296,47 +348,62 @@ else:
     breadcrumb:"Logika Alur",
     content:`<div style="text-align:center; padding:20px;">
     <i class="fas fa-tired fa-5x" style="color:#7f8c8d; margin-bottom:20px;"></i>
-    <h1>Manusia Cepat Bosan.</h1>
-    <p style="font-size:1.2rem;">Coba bayangkan kamu disuruh menyuruh mencetak angka 1 sampai 1000 secara manual. Tanganmu akan keriting.</p>
-    <p style="font-size:1.2rem;">Tapi Komputer? <strong>Tidak Pernah Capek.</strong></p>
-    <p style="font-size:1.2rem;">Inilah kekuatan utama pemrograman: <strong>LOOP (Perulangan)</strong>.</p>
+    <h1>Manusia Cepat Bosan & Lelah.</h1>
+    <p style="font-size:1.2rem;">Bayangkan kamu disuruh mengetik "Saya tidak akan telat lagi" sebanyak 1000 kali. Tanganmu akan keriting.</p>
+    <p style="font-size:1.2rem;">Tapi Komputer? <strong>Tidak Pernah Capek!</strong> Inilah kekuatan utama pemrograman: <strong>LOOP (Perulangan)</strong>.</p>
 </div>`},
 
-  { id:"4.2", part:4, title:"while Loop", icon:"fa-spinner",
+  { id:"4.2", part:4, title:"While Loop", icon:"fa-spinner",
     breadcrumb:"Logika Alur",
     content:`<h1 style="text-align:center">While Loop (Selama)</h1>
 <div style="text-align:center; padding:10px;">
-    <i class="fas fa-hammer fa-3x" style="margin-bottom:10px;"></i>
+    <i class="fas fa-hammer fa-3x" style="margin-bottom:10px; color: #34495e"></i>
     <p style="font-size:1.2rem;"><strong>Analogi:</strong> <em>Selama</em> paku belum tenggelam, pukul terus dengan palu.</p>
+    <p style="font-size:1.1rem;">While Loop bekerja bergantung pada kondisi <code>True/False</code>, mirip seperti <code>if</code>, tapi ia akan <strong>kembali ke atas</strong> berulang-ulang sampai kondisinya jadi <code>False</code>.</p>
+</div>`},
+
+  { id:"4.3", part:4, title:"Praktek While", icon:"fa-recycle",
+    breadcrumb:"Logika Alur",
+    content:`<h1>Awas Infinite Loop!</h1>
+<div class="warn-box" style="font-size:1.1rem">
+    Jika kamu memakai <code>while</code>, pastikan variabel kondisinya <strong>berubah</strong> di dalam blok kode. Jika nilainya tidak pernah berubah, loop akan berjalan abadi (komputer nge-hang)!
 </div>
-<div class="block-code" style="font-size:0.9rem; margin-top:10px;">
-<span class="kw">energi</span> = <span class="nu">3</span><br>
-<span class="kw">while</span> energi > <span class="nu">0</span>:<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="fn">print</span>(<span class="st">"Bekerja..."</span>)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="kw">energi</span> = <span class="kw">energi</span> - <span class="nu">1</span>
-</div>
-<div class="warn-box"><strong>AWAS INFINITE LOOP:</strong> Jika energi tidak dikurangi (baris ke-4 dihapus), komputer akan "Bekerja" tanpa henti sampai hang!</div>
 `,playground:`stok = 3
+
 while stok > 0:
     print("Jual Barang. Sisa:", stok)
-    # Coba hapus baris di bawah ini kalau berani!
+    
+    # Pengurangan ini SANGAT PENTING!
+    # Hapus baris ini kalau berani bikin laptop ngadat!
     stok = stok - 1
+    
 print("Stok Habis!")`},
 
-  { id:"4.3", part:4, title:"for Loop & range", icon:"fa-list-ol",
+  { id:"4.4", part:4, title:"Analogi For Loop", icon:"fa-users",
     breadcrumb:"Logika Alur",
-    content:`<h1>For Loop & Range()</h1>
-<p style="font-size:1.1rem;">Gunakan <code>for</code> jika kamu <strong>sudah tahu pasti</strong> jumlah ulangannya (misal dari daftar belanja atau urutan angka).</p>
-<div class="block-code">
-<span class="cm"># range(1, 6) berhenti SEBELUM angka 6</span><br>
+    content:`<h1 style="text-align:center">For Loop</h1>
+<div style="text-align:center; padding:10px;">
+    <i class="fas fa-chalkboard-teacher fa-3x" style="color:var(--her-purple); margin-bottom:10px;"></i>
+    <p style="font-size:1.2rem;"><strong>Analogi:</strong> Mengabsen murid dari absen pertama sampai absen terakhir.</p>
+</div>
+<p style="font-size:1.1rem; margin-top:20px;">Berbeda dengan <code>while</code> yang berhenti berdasarkan kondisi, <code>for</code> loop digunakan jika kamu <strong>sudah tahu pasti</strong> jumlah ulangannya (misal: jalankan tepat 5 kali, atau jalankan ke semua item dalam kotak box).</p>
+`},
+
+  { id:"4.5", part:4, title:"Praktek For & Range", icon:"fa-list-ol",
+    breadcrumb:"Logika Alur",
+    content:`<h1>For Loop & Fungsi range()</h1>
+<p style="font-size:1.1rem;">Python menyediakan alat ukur <code>range()</code> untuk membuat daftar angka otomatis. Sangat cocok dijodohkan dengan For Loop.</p>
+<div class="block-code" style="font-size:0.95rem">
+<span class="cm"># range(1, 6) menghasilkan angka 1 sampai 5.</span><br>
+<span class="cm"># Ia berhenti SEBELUM angka batas akhir!</span><br>
 <span class="kw">for</span> nomor <span class="kw">in</span> <span class="fn">range</span>(1, 6):<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="fn">print</span>(<span class="st">"Putaran ke-"</span>, nomor)
 </div>
-<div class="ok-box"><strong>ANTI PANIK:</strong> Kalian tidak perlu mati-matian menghafal cara menulis while atau for malam ini! Cukup pahami konsep kerjanya secara logis.</div>
+<div class="ok-box"><strong>ANTI PANIK:</strong> Jangan dipaksa hafal malam ini! Cukup pahami kapan harus pakai For (jumlah pasti) dan kapan pakai While (menunggu kondisi selesai).</div>
 `,playground:`for nomor in range(1, 6):
-    print("Mencetak dokumen ke-", nomor)`},
+    print("Mencetak halaman ke-", nomor)`},
 
-  { id:"4.4", part:4, title:"Langkah Selanjutnya", icon:"fa-rocket",
+  { id:"4.6", part:4, title:"Langkah Selanjutnya", icon:"fa-rocket",
     breadcrumb:"Penutupan",
     content:`<div style="text-align:center; padding:20px;">
     <i class="fas fa-rocket fa-5x" style="color:var(--her-pink); margin-bottom:20px;"></i>
