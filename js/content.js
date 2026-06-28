@@ -90,11 +90,11 @@ print("Halo dari Indonesia")`},
 
   { id:"2.2", part:2, title:"Apa Itu Variabel?", icon:"fa-box-open",
     breadcrumb:"Hands-On Dasar",
-    content:`<h1 style="text-align:center">Variabel = Kardus Penyimpanan</h1>
+    content:`<h1 style="text-align:center">Variabel = Kontak HP</h1>
 <div style="text-align:center; padding:20px;">
-    <i class="fas fa-box-open fa-5x" style="color:#d4a373; margin-bottom:10px;"></i>
-    <p style="font-size:1.2rem;">Bayangkan variabel itu seperti kardus kosong.</p>
-    <p style="font-size:1.2rem;">Kamu bisa menempelkan "Label Nama" di kardus itu, dan memasukkan barang (Data) ke dalamnya untuk dipakai nanti.</p>
+    <i class="fas fa-address-book fa-5x" style="color:#d4a373; margin-bottom:10px;"></i>
+    <p style="font-size:1.2rem;">Bayangkan variabel itu seperti menyimpan Kontak di HP kamu.</p>
+    <p style="font-size:1.2rem;">Kamu memberi "Nama Kontak" (Variabel), lalu memasukkan "Nomor HP" (Data) ke dalamnya. Besok-besok, kamu cukup panggil namanya saja tanpa perlu menghafal nomornya!</p>
 </div>
 <div class="block-code" style="font-size:1.1rem">
 nama = "Her AI"<br>
@@ -110,17 +110,17 @@ umur = 20
 </div>
 <p style="font-size:1.1rem">Tanda <code>=</code> artinya <strong>"SIMPAN"</strong> atau <strong>"MASUKKAN"</strong> (dari Kanan ke Kiri).</p>
 <div class="block-code">
-nyawa = 3
+jumlah_pesan = 5
 </div>
-<p>Komputer membaca: <i>"Ambil angka 3 (Kanan), lalu MASUKKAN ke dalam kardus bernama 'nyawa' (Kiri)."</i></p>
-`,playground:`nyawa = 3
-print("Jumlah nyawa awal:")
-print(nyawa)`},
+<p>Komputer membaca: <i>"Ambil angka 5 (Kanan), lalu MASUKKAN ke dalam Kotak bernama 'jumlah_pesan' (Kiri)."</i></p>
+`,playground:`jumlah_pesan = 5
+print("Jumlah pesan awal:")
+print(jumlah_pesan)`},
 
   { id:"2.4", part:2, title:"Aturan Penamaan", icon:"fa-spell-check",
     breadcrumb:"Hands-On Dasar",
     content:`<h1>Aturan Memberi Nama Variabel</h1>
-<p style="font-size:1.1rem">Python sedikit cerewet soal nama kardus (variabel). Ingat 3 aturan ini:</p>
+<p style="font-size:1.1rem">Python sedikit cerewet soal nama variabel. Ingat 3 aturan ini:</p>
 <table class="comparison-table" style="font-size:1.1rem">
 <tr><td style="color:#2ecc71"><i class="fas fa-check"></i> Boleh</td><td><code>nama_lengkap</code>, <code>umur1</code>, <code>_rahasia</code></td></tr>
 <tr><td style="color:#e74c3c"><i class="fas fa-times"></i> DILARANG Pakai Spasi</td><td><code>nama lengkap</code> &rarr; Error!</td></tr>
@@ -357,9 +357,9 @@ else:
     breadcrumb:"Logika Alur",
     content:`<h1 style="text-align:center">While Loop (Selama)</h1>
 <div style="text-align:center; padding:10px;">
-    <i class="fas fa-hammer fa-3x" style="margin-bottom:10px; color: #34495e"></i>
-    <p style="font-size:1.2rem;"><strong>Analogi:</strong> <em>Selama</em> paku belum tenggelam, pukul terus dengan palu.</p>
-    <p style="font-size:1.1rem;">While Loop bekerja bergantung pada kondisi <code>True/False</code>, mirip seperti <code>if</code>, tapi ia akan <strong>kembali ke atas</strong> berulang-ulang sampai kondisinya jadi <code>False</code>.</p>
+    <i class="fas fa-battery-half fa-3x" style="margin-bottom:10px; color: #34495e"></i>
+    <p style="font-size:1.2rem;"><strong>Analogi Mengecas HP:</strong> <em>Selama</em> baterai HP belum 100% (True), charge terus.</p>
+    <p style="font-size:1.1rem;">While Loop bekerja bergantung pada kondisi <code>True/False</code>, mirip seperti <code>if</code>, tapi ia akan <strong>kembali ke atas</strong> berulang-ulang sampai kondisinya jadi <code>False</code> (baterai penuh).</p>
 </div>`},
 
   { id:"4.3", part:4, title:"Praktek While", icon:"fa-recycle",
@@ -368,23 +368,23 @@ else:
 <div class="warn-box" style="font-size:1.1rem">
     Jika kamu memakai <code>while</code>, pastikan variabel kondisinya <strong>berubah</strong> di dalam blok kode. Jika nilainya tidak pernah berubah, loop akan berjalan abadi (komputer nge-hang)!
 </div>
-`,playground:`stok = 3
+`,playground:`baterai = 20
 
-while stok > 0:
-    print("Jual Barang. Sisa:", stok)
+while baterai < 100:
+    print("Mengecas HP... Baterai sekarang:", baterai, "%")
     
-    # Pengurangan ini SANGAT PENTING!
+    # Penambahan ini SANGAT PENTING!
     # Hapus baris ini kalau berani bikin laptop ngadat!
-    stok = stok - 1
+    baterai = baterai + 20
     
-print("Stok Habis!")`},
+print("Baterai Penuh 100%!")`},
 
   { id:"4.4", part:4, title:"Analogi For Loop", icon:"fa-users",
     breadcrumb:"Logika Alur",
     content:`<h1 style="text-align:center">For Loop</h1>
 <div style="text-align:center; padding:10px;">
-    <i class="fas fa-chalkboard-teacher fa-3x" style="color:var(--her-purple); margin-bottom:10px;"></i>
-    <p style="font-size:1.2rem;"><strong>Analogi:</strong> Mengabsen murid dari absen pertama sampai absen terakhir.</p>
+    <i class="fas fa-music fa-3x" style="color:var(--her-purple); margin-bottom:10px;"></i>
+    <p style="font-size:1.2rem;"><strong>Analogi Memutar Playlist Lagu:</strong> Memutar lagu secara berurutan dari lagu pertama sampai terakhir.</p>
 </div>
 <p style="font-size:1.1rem; margin-top:20px;">Berbeda dengan <code>while</code> yang berhenti berdasarkan kondisi, <code>for</code> loop digunakan jika kamu <strong>sudah tahu pasti</strong> jumlah ulangannya (misal: jalankan tepat 5 kali, atau jalankan ke semua item dalam kotak box).</p>
 `},
@@ -396,12 +396,12 @@ print("Stok Habis!")`},
 <div class="block-code" style="font-size:0.95rem">
 <span class="cm"># range(1, 6) menghasilkan angka 1 sampai 5.</span><br>
 <span class="cm"># Ia berhenti SEBELUM angka batas akhir!</span><br>
-<span class="kw">for</span> nomor <span class="kw">in</span> <span class="fn">range</span>(1, 6):<br>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="fn">print</span>(<span class="st">"Putaran ke-"</span>, nomor)
+<span class="kw">for</span> urutan <span class="kw">in</span> <span class="fn">range</span>(1, 6):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="fn">print</span>(<span class="st">"Memutar lagu ke-"</span>, urutan)
 </div>
 <div class="ok-box"><strong>ANTI PANIK:</strong> Jangan dipaksa hafal malam ini! Cukup pahami kapan harus pakai For (jumlah pasti) dan kapan pakai While (menunggu kondisi selesai).</div>
-`,playground:`for nomor in range(1, 6):
-    print("Mencetak halaman ke-", nomor)`},
+`,playground:`for urutan in range(1, 6):
+    print("Memutar lagu ke-", urutan)`},
 
   { id:"4.6", part:4, title:"Langkah Selanjutnya", icon:"fa-rocket",
     breadcrumb:"Penutupan",
